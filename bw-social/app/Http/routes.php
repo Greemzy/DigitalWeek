@@ -35,4 +35,4 @@ Route::group(['middleware' => 'web'], function () {
     Route::ressource('user','UserController');
     Route::get('/home', 'HomeController@index');
 });
-Route::get('/conversations', ['as' => 'conversations', 'uses' => 'ConversationsController@index'])
+Route::get('/conversations', ['as' => 'conversations', 'uses' => 'ConversationsController@index']);
