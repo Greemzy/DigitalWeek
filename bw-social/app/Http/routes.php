@@ -32,7 +32,7 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
-    Route::ressource('user','UserController');
+    //Route::ressource('user','UserController');
     Route::get('/home', 'HomeController@index');
 });
 Route::get('/conversations', ['as' => 'conversations', 'uses' => 'ConversationsController@index']);
