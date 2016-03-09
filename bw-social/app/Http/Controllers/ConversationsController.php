@@ -20,6 +20,6 @@ class ConversationsController extends Controller
 
   public function getMessages(Request $test) {
     $messages = ConversationsMessages::where(['conv_id' => 1])->orderBy('created_at', 'desc')->take(10)->get();
-    return view('site.messages', ['messages' => $messages]);
+    return view('messages', ['messages' => $messages]);
   }
 }
