@@ -18,8 +18,8 @@ class ConversationsController extends Controller
     //return view('user', ['user' => $user, ]);
   }*/
 
-  public function getMessages(Request $test) {
+  public function getMessages() {
     $messages = ConversationsMessages::where(['conv_id' => 1])->orderBy('created_at', 'desc')->take(10)->get();
-    return view('messages', ['messages' => $messages]);
+    return view('messages',  ['ConversationsMessages' => $messages]);
   }
 }
