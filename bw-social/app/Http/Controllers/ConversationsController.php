@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use DB;
-use Illuminate\Http\Request;
+use Illuminate\Http\Requests;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Requests;
 use App\User;
 use App\ConversationsMessages;
 
@@ -49,20 +48,26 @@ class ConversationsController extends Controller
   }
 
   public function getMessages($conv_id) {
-    $messages = ConversationsMessages::where(['conv_id' => $conv_id])->orderBy('created_at', 'desc')->take(10)->get();
+    $messages = ConversationsMessages::where(['conv_id' => $conv_id])
+    ->join('users', 'users.id', '=', 'conversations_messages.id')
+    ->orderBy('conversations_messages.created_at', 'asc')->take(10)->get();
     return view('messages',  ['messages' => $messages]);
   }
+/*
+  public function addMessage(Request $request, $conv_id)
+  {
+    $user = Auth::user();
+      dd($user);
+      dd($request);
+      $message = ConversationsMessages::create($request->all());
+      $message -> user_id = 1;
+      $message -> conv_id = $conv_id;
+      $message -> content = 'iygiygiyg';
+      $message -> read = 0 ;
+      $message->created_at = date("Y-m-d H:i:s");
+      $message->save();
+
+      return redirect('messages/{$conv_id}');
+  }*/
+
 }
-
-
-        /*
-        Messages
-        Si on passe par conversations:
-        $convs = DB::table('Conversations')->where('id',$conv_id->conv_id)->get();
-        foreach($convs as $conv)
-        {
-
-        Sinon et de toute façon:
-
-        $messages = DB::table('Conversations_Messages')->where('conv_id',$conv_id->conv_id)->get();
-        */

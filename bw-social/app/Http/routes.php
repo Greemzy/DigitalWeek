@@ -36,4 +36,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/home', 'HomeController@index');
 });
 Route::get('conversations', ['as' => 'conversations', 'uses' => 'ConversationsController@index']);
+
 Route::get('messages/{conv_id}', ['as' => 'messages', 'uses' => 'ConversationsController@getMessages']);
+Route::post('messages/{conv_id}/ajout', ['as' => 'message.add', 'uses' => 'ConversationsController@addMessage']);
