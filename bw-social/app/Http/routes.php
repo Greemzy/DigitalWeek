@@ -10,7 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+Route::model('activity', 'App\Activity');
 Route::get('/', function () {
     return view('welcome');
 });
@@ -34,4 +34,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
     //Route::ressource('user','UserController');
     Route::get('/home', 'HomeController@index');
+    Route::get('/activities', ['as' => 'activities.index', 'uses' => 'ActivitiesController@index']);
+    Route::get('/activities/create', ['as' => 'activities.create', 'uses' => 'ActivitiesController@create']);
+    Route::post('/activities/store',['as' => 'activities.store', 'uses' => 'ActivitiesController@store']);
+    Route::post('/activities/more',['as' => 'activities.more', 'uses' => 'ActivitiesController@more']);
+    Route::get('/activities/perso', ['as' => 'activities.perso', 'uses' => 'ActivitiesController@perso']);
+    Route::get('/activities/{activity}/add', ['as' => 'activities.add', 'uses' => 'ActivitiesController@add']);
 });

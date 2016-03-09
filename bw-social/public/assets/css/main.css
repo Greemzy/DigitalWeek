@@ -1,0 +1,33 @@
+.activity_description{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 25px;
+}
+
+.date{
+    font-size: 12px;
+}
+
+.more{
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.participate{
+    display: none;
+    float: right;
+    padding: 10px;
+}
+
+.expand{
+    height: auto !important;
+}
+
+.hidden{
+    display: none;
+}
+
+.nohidden{
+    display: block;
+}
