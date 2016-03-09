@@ -30,8 +30,6 @@ class ConversationsController extends Controller
         {
             //variable a transmettre, régler le problème de vue
             //A faire dans la vue
-            echo($conversation->user_id);
-            echo($conversation->conv_id);
             $other_users[$i] = DB::table('Users')->where('users.id','=',$conversation->user_id)
                 ->join('conversations_messages', function ($join)use($conversation) {
                         $join->on('users.id', '=', 'conversations_messages.user_id')

@@ -16,7 +16,7 @@
                       
                 </div>
                   <div class="col-xs-3">
-                    @datetime($user->begin_at)
+                    @datetime(date_create(($user->created_at)))
                     </div>
               </div>
             </a>
