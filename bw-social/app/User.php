@@ -24,7 +24,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function userActivity(){
+    public function userActivity()    {
         return $this->hasMany('App\UserActivity');
+    }
+
+    public function conversations(){
+      return $this->hasMany('App\ConversationsUsers');
     }
 }

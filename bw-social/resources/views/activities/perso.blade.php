@@ -1,23 +1,13 @@
-@extends('layouts.base')
-
-@section('menu')
-<div class="navbar-header">
-
-    <!-- Collapsed Hamburger -->
-    <a href="{{ route('activities.create') }}" class="navbar-toggle collapsed">
+@extends('layouts.app')
+@section('logo')
+    <a href="{{ route('activities.create') }}" class="">
         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
     </a>
-    <a href="{{ route('activities.index') }}" class="navbar-toggle collapsed">
+    <a href="{{ route('activities.index') }}" class="">
         <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
     </a>
 
-    <!-- Branding Image -->
-    <a class="navbar-brand" href="{{ url('/activities') }}">
-        Activités
-    </a>
-</div>
 @endsection
-
 @section('content')
 <div class="container">
     <div class="row">

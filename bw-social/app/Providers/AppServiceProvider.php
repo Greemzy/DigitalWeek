@@ -14,8 +14,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         \Blade::directive('datetimeActivity', function($expression) {
-            $date = \DateTime::createFromFormat('Y-m-d hh:mm:ss',$expression);
+            $date = \DateTime::createFromFormat('Y-m-d hh:mm:ss', $expression);
             return "<?php echo 'le '.with($date, 'g:ia \a l jS F Y'); ?>";
+        });
+
+      \Blade::directive('datetime', function($expression) {
+            return "<?php echo 'posté le '. with{$expression}->format('d/m/Y'); ?>";
         });
     }
 

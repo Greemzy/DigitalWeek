@@ -1,3 +1,211 @@
+html, body {
+    font-size: 16px;
+    line-height: 1.4;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a, ul, li {
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+    float : left;
+}
+
+
+.container {
+    margin: 0 20px;
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.site-content {
+    padding-top: 66px;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 66px;
+    line-height: 66px;
+    color: #FFF;
+    background-color: #303f9f;
+}
+
+.header__logo {
+    font-weight: bold;
+    padding: 0 25px;
+    float: left;
+}
+
+.menu {
+    float: left;
+}
+
+.menu a {
+    padding: 0 10px;
+}
+
+.menu a:hover {
+    color: #ffd511;
+}
+
+@media only screen and (max-width: 750px) {
+
+    a, ul, li {
+        float : none;
+    }
+    
+    .site-pusher, .site-container {
+        height: 100%;
+    }
+
+    .site-container {
+        overflow: hidden;
+    }
+
+    .site-pusher {
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+
+    .site-content {
+        position: absolute;
+        top: 66px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding-top: 0;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .header {
+        position: static;
+        background-color: #002674;
+    }
+
+    .menu.icon {
+        font-size: 2rem;
+    }
+    .icon-mon-compte{
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .header__icon {
+        position: relative;
+        display: block;
+        float: left;
+        width: 50px;
+        height: 66px;
+        cursor: pointer;
+    }
+
+    .header__icon:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1.4rem;
+        height: 0;
+        top: 16px;
+        left: 15px;
+        -moz-box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+        -webkit-box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+        box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+    }
+
+    .menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        background-color: #2a378b;
+        width: 250px;
+        -moz-transform: translateX(-250px);
+        -moz-transform: translateX(-250px);
+        -ms-transform: translateX(-250px);
+        -webkit-transform: translateX(-250px);
+        transform: translateX(-250px);
+        background-image : url("http://mobile.bestwestern.fr/public/images/img_v3/bg_menu.png");
+        background-position: center;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-size: cover;
+    }
+
+    .menu a {
+        box-shadow: none;
+        display: block;
+        text-decoration: none;
+        padding: 0;
+    }
+    .menu ul {
+        font-size: 0.75rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .menu ul li {
+        position: relative;
+        margin: 0 2%;
+
+        padding-bottom: 5px;
+        padding-top: 5px;
+        color: #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        vertical-align: baseline;
+    }
+    .text {
+        text-transform: uppercase;
+        vertical-align: 50%;
+        line-height: 1rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    .menu a.active { color: #ffd511; }
+    .with--sidebar .site-pusher {
+        -moz-transform: translateX(250px);
+        -ms-transform: translateX(250px);
+        -webkit-transform: translateX(250px);
+        transform: translateX(250px);
+    }
+
+    .with--sidebar .site-cache {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .icon {
+        font-size: 2rem;
+    }
+    .icon-mon-compte {
+        background: url("http://mobile.bestwestern.fr/public/images/homme.png") no-repeat;
+        background-size: 100%;
+    }
+    .icon-mon-compte:before {
+        content: "\e60c";
+        visibility: hidden;
+    }
+}
+
 .activity_description{
     text-overflow: ellipsis;
     overflow: hidden;
