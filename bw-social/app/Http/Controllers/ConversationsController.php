@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 use App\User;
 use App\ConversationsMessages;
@@ -12,11 +13,10 @@ class ConversationsController extends Controller
 {
   public function index() {
     $user = Auth::user();
-<<<<<<< HEAD
- 
+      dd($user);
     // useless si db $user_id =  DB::table('User')->where('user_id',$user->id);
       
-    $conv_ids = DB::table('Conversations_users')->where('user_id',$user->id)->get();
+    $conv_ids = DB::table('Conversations_users')->where('user_id',$user)->get();
     foreach($conv_ids as $conv_id)
     {
         
@@ -25,12 +25,14 @@ class ConversationsController extends Controller
             ['users_id','<>',$conv_id->users_id],
         ])->get();
         
+        $other_users = array();
+        $i = 0;
         foreach($conversations as $conversation)
         {
             //variable a transmettre, régler le problème de vue
             //A faire dans la vue
-            $other_users = DB::table('User')->where('id',$conversation->users_id)->get();
-            
+            $other_user[$i] = DB::table('Users')->where('id',$conversation->users_id)->get();
+            $i++;
             /*
             foreach($other_users as other_user)
             {
@@ -40,8 +42,9 @@ class ConversationsController extends Controller
             }
             */
         }
+        var_dump($other_users);
     }
-    return view('conversations', ['conversations' => $conversations]);
+    return view('conversations', ['conversations' => $user]);
   }
 
   public function getMessages() {
