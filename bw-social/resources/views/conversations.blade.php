@@ -3,11 +3,8 @@
 @section('content')
   @if($conversations)
     @foreach($conversations as $conversation)
-    <div>
-        <div> {{ $conversation->id}} </div>
-
-        <td> @date($conversation->begin_at) </td>
-        <td><a href="/conversations/{{ $conversation->id}}">Voir les photos du concours</a></td>
+    <div class="row">
+        <div class="col-sm-4 center"> {{ $conversation->id}} </div>
     </div>
     @endforeach
   @endif
