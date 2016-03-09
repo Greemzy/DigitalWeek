@@ -14,17 +14,21 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'User1',
-            'email' => 'sageot.m@hotmail.fr',
+            'firstname' => 'User1',
+            'email' => 'sageot.ma@hotmail.fr',
             'password' => bcrypt('User1'),
             'age' => \Carbon\Carbon::create(1989,5,20),
+            'id_hotel' => '1',
             'rank' => 'Blue'
         ]);
 
         DB::table('users')->insert([
             'name' => 'User2',
+            'firstname' => 'User2',
             'email' => 'sageot.m@hotmail.fr',
             'password' => bcrypt('User2'),
             'age' => \Carbon\Carbon::create(1989,5,20),
+            'id_hotel' => '1',
             'rank' => 'Diamond'
         ]);
     }
