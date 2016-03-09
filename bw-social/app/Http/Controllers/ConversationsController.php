@@ -7,21 +7,20 @@ use Illuminate\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\ConversationsMessages;
+use App\ConversationsUsers;
 
 class ConversationsController extends Controller
 {
   public function index() {
     $user = Auth::user();
-      dd($user);
     // useless si db $user_id =  DB::table('User')->where('user_id',$user->id);
 
-    $conv_ids = DB::table('Conversations_users')->where('user_id',$user)->get();
+    $conv_ids = ConversationsUsers::where(['user_id' => 1])->get();
     foreach($conv_ids as $conv_id)
     {
-
-        $conversations = DB::table('Conversations_users')->where([
+        $conversations = ConversationsUsers::where([
             ['conv_id',$conv_id->conv_id],
-            ['users_id','<>',$conv_id->users_id],
+            ['user_id','<>',$conv_id->user_id],
         ])->get();
 
 
@@ -31,7 +30,14 @@ class ConversationsController extends Controller
         {
             //variable a transmettre, régler le problème de vue
             //A faire dans la vue
-            $other_user[$i] = DB::table('Users')->where('id',$conversation->users_id)->get();
+            echo($conversation->user_id);
+            echo($conversation->conv_id);
+            $other_users[$i] = DB::table('Users')->where('users.id','=',$conversation->user_id)
+                ->join('conversations_messages', function ($join)use($conversation) {
+                        $join->on('users.id', '=', 'conversations_messages.user_id')
+                             ->where('conversations_messages.conv_id', '=', $conversation->conv_id);
+                    })
+                ->get();
             $i++;
             /*
             foreach($other_users as other_user)
@@ -42,9 +48,8 @@ class ConversationsController extends Controller
             }
             */
         }
-        var_dump($other_users);
     }
-    return view('conversations', ['conversations' => $user]);
+    return view('conversations', ['other_users' => $other_users]);
   }
 
   public function getMessages($conv_id) {
