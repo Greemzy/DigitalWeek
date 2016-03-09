@@ -7,7 +7,7 @@
         <div> {{ $conversation->id}} </div>
 
         <td> @date($conversation->begin_at) </td>
-        <td><a href="/conversations/{{ $conversation->id}}">Voir les photos du concours</a></td>
+        <td><a href="/messages/{{ $conversation->id}}">Voir les photos du concours</a></td>
     </div>
     @endforeach
   @endif
