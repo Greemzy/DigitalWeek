@@ -9,14 +9,14 @@ use App\ConversationsMessages;
 
 class ConversationsController extends Controller
 {
-  /*public function index() {
+  public function index() {
     $user = Auth::user();
     $resultat = db('User')->where('user_id','=',$user->id);
     //conv_id de conversations_users
     $les_conv_id = db('')
     //convs de conv
-    //return view('user', ['user' => $user, ]);
-  }*/
+    return view('conversations', ['user' => $user ]);
+  }
 
   public function getMessages() {
     $messages = ConversationsMessages::where(['conv_id' => 1])->orderBy('created_at', 'desc')->take(10)->get();

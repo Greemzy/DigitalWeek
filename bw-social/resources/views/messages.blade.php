@@ -2,10 +2,6 @@
 
 @section('content')
     @foreach($messages as $message)
-      <div>
-        <div> {{ $message->}} </div>
-        <div> {{ $message->content}} </div>
-        <div> {{ $message->@date(created_at)}} </div>
-      </div>
+      <div> {{ $message->}} :  {{ $message->content}} {{ $message->@date(created_at)}} </div>
     @endforeach
 @endsection

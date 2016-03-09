@@ -3,12 +3,12 @@
 @section('content')
   @if($conversations)
     @foreach($conversations as $conversation)
-    <div>
+    <a href="/messages/{{ $conversation->id}}">
+      <div>
         <div> {{ $conversation->id}} </div>
-
         <td> @date($conversation->begin_at) </td>
-        <td><a href="/messages/{{ $conversation->id}}">Voir les photos du concours</a></td>
-    </div>
+      </div>
+    </a>
     @endforeach
   @endif
 @endsection
