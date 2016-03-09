@@ -6,11 +6,13 @@ use DB;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
+use App\ConversationsMessages;
 
 class ConversationsController extends Controller
 {
   public function index() {
     $user = Auth::user();
+<<<<<<< HEAD
  
     // useless si db $user_id =  DB::table('User')->where('user_id',$user->id);
       
@@ -39,12 +41,12 @@ class ConversationsController extends Controller
             */
         }
     }
-      
-      
-    //conv_id de conversations_users
-
-    //convs de conv
     return view('conversations', ['conversations' => $conversations]);
+  }
+
+  public function getMessages() {
+    $messages = ConversationsMessages::where(['conv_id' => 1])->orderBy('created_at', 'desc')->take(10)->get();
+    return view('messages',  ['messages' => $messages]);
   }
 }
 
