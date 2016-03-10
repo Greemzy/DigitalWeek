@@ -14,7 +14,7 @@ Route::model('activity', 'App\Activity');
 Route::model('conversation', 'App\conversations');
 Route::model('user', 'App\User');
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('home'));
 });
 
 /*
@@ -30,7 +30,7 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
-    Route::get('/home', 'HomeController@index');
+    Route::get('/home',['as' => 'home', 'uses' => 'HomeController@index'] );
     Route::group(['middleware' => 'auth'], function () {
         Route::get('/activities', ['as' => 'activities.index', 'uses' => 'ActivitiesController@index']);
         Route::get('/activities/create', ['as' => 'activities.create', 'uses' => 'ActivitiesController@create']);

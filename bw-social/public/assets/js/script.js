@@ -23,9 +23,10 @@ $.ajaxSetup({
 $(".more").on('click', function (e) {
     var element = e.target;
     var prev = element.previousElementSibling;
+    var prevprev = prev.previousElementSibling;
     var next = element.nextElementSibling;
     element.classList.add("hidden");
-    prev.classList.add("expand");
+    prevprev.classList.add("expand");
     next.classList.remove("hidden");
     next.classList.add("nohidden");
     e.preventDefault();
@@ -34,12 +35,14 @@ $(".more").on('click', function (e) {
 
 $("a.less").on('click', function (e) {
     var element = e.target;
+    var description = $('.activity_description');
     var prev = element.previousElementSibling;
     var prevprev = prev.previousElementSibling;
+    var prevprevprev = prevprev.previousElementSibling;
     element.classList.remove("nohidden");
     element.classList.add("hidden");
     prev.classList.remove("hidden");
-    prevprev.classList.remove("expand");
+    prevprevprev.classList.remove("expand")
 
 
     // e.preventDefault();
