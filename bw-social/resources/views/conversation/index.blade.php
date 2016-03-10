@@ -7,9 +7,8 @@
                 $message = $conversation->lastMessages;
                 $content = $message->last();
             ?>
-                <a href="{{route('conversation.delete', [ 'conversation' => $conversation->conv_id])}} ">delete</a>
+                <a href="{{route('conversation.delete', [ 'conversation' => $conversation->conv_id])}} "></a>
         
-           @if(!is_null($content))
                <div class="conversation" style="padding: 10px;background-color: white;margin-bottom: 5px;">
 
                         <div class="row">
@@ -29,7 +28,7 @@
                                     <p>{{ $content->content}}</p>
                                 </div>
                             </a>
-                            <div class="col-xs-3" style="padding-top:10px;">
+                            <div class="col-xs-3" style="padding-top:10px;padding-left;">
                                 @datetimea(date_create(($content->created_at)))
                             </div>
 
@@ -37,7 +36,6 @@
                         </div>
 
                </div>
-           @endif
         @endforeach
     @endif
 @endsection
