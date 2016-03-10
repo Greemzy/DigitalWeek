@@ -52,6 +52,14 @@ class ConversationsController extends Controller
 
     }
 
+    public function delete(Conversations $conversation){
+
+        $user = Auth::user();
+        $conversationUsers = ConversationsUsers::where('user_id', '=' , $user->id)->where('conv_id', '=', $conversation->id)->delete();
+
+        return redirect(route('conversation'));
+    }
+
   public function addMessage(Request $request, Conversations $conversation)
   {
       $data = $request->all();
