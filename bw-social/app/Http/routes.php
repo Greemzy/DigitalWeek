@@ -11,7 +11,7 @@
 |
 */
 Route::model('activity', 'App\Activity');
-Route::model('conv_id', 'App\conversations');
+Route::model('conversation', 'App\conversations');
 Route::model('user', 'App\User');
 Route::get('/', function () {
     return view('welcome');
@@ -39,10 +39,11 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/activities/perso', ['as' => 'activities.perso', 'uses' => 'ActivitiesController@perso']);
         Route::get('/activities/{activity}/add', ['as' => 'activities.add', 'uses' => 'ActivitiesController@add']);
         Route::resource('user', 'UserController', ['only' => ['index', 'show']]);
-
-        Route::get('conversations', ['as' => 'conversations', 'uses' => 'ConversationsController@index']);
-        Route::get('conversations/{conv_id}', ['as' => 'conversations.show', 'uses' => 'ConversationsController@getMessages']);
-        Route::post('conversations/{conv_id}/ajout', ['as' => 'conversations.add', 'uses' => 'ConversationsController@addMessage']);
+        Route::resource('conversation', 'ConversationsController', ['only' => ['index', 'show']]);
+        Route::get('conversation/create/{user}', ['as' => 'conversation.create', 'uses' => 'ConversationsController@create']);
+        /*Route::get('conversations', ['as' => 'conversations', 'uses' => 'ConversationsController@index']);
+        Route::get('conversations/{conv_id}', ['as' => 'conversations.show', 'uses' => 'ConversationsController@getMessages']);*/
+        Route::post('conversation/{conversation}/ajout', ['as' => 'conversation.add', 'uses' => 'ConversationsController@addMessage']);
     });
 });
 

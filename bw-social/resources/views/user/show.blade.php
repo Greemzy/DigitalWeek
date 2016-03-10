@@ -16,4 +16,11 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="container">
+            <a href="{{ route('conversation.create', ['user' => $user]) }}">
+                Envoyer un message
+            </a>
+        </div>
+    </div>
 @endsection

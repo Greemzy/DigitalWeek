@@ -10,7 +10,7 @@
         </div>
     @endforeach
   <div class="inputMessages">
-    <form class="form" method="POST" enctype="multipart/form-data" action="{{ route('conversations.add', ['conv_id' => $message->conv_id]) }}">
+    <form class="form" method="POST" enctype="multipart/form-data" action="{{ route('conversation.add', ['conversation' => $conversation->conv_id]) }}">
         {{ csrf_field() }}
       <input class="formMessages" type="text" name="content" placeholder="Message...">
     </form>
