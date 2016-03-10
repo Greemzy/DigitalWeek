@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::model('user', 'App\User');
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,15 +27,12 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
-
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
-    //Route::ressource('user','UserController');
     Route::get('/home', 'HomeController@index');
+    Route::resource('user','UserController', ['only' => ['index', 'show']]);
 });
+
 Route::get('conversations', ['as' => 'conversations', 'uses' => 'ConversationsController@index']);
 
 Route::get('messages/{conv_id}', ['as' => 'messages', 'uses' => 'ConversationsController@getMessages']);

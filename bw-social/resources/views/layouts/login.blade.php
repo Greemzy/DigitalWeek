@@ -11,7 +11,6 @@
           type='text/css'>
 
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/messages.css') }}" rel="stylesheet">
 
     <!-- Fonts -->
 
@@ -29,30 +28,7 @@
             <a href="/" class="header__logo">Logo</a>
             <nav class="menu">
                 <ul>
-                    <li>
-                        <a href="{{ route('user.show',['user' => Auth::user()->id]) }}">
-                            <span class="icon icon-mon-compte"></span>
-                            <span class="text">Mon compte</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon icon-mon-compte"></span>
-                            <span class="text">Mes messages</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('user.index')}}">
-                            <span class="icon icon-mon-compte"></span>
-                            <span class="text">Utilisateurs connectés</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon icon-mon-compte"></span>
-                            <span class="text">Activités</span>
-                        </a>
-                    </li>
+
                     @if (Auth::guest())
                         <li>
                             <a href="{{ url('/login') }}">

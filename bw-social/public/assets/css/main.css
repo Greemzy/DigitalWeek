@@ -32,7 +32,7 @@ a, ul, li {
     height: 66px;
     line-height: 66px;
     color: #FFF;
-    background-color: #303f9f;
+    background-color: #002674;
 }
 
 .header__logo {
@@ -52,7 +52,62 @@ a, ul, li {
 .menu a:hover {
     color: #ffd511;
 }
+.user_logo{
+    display: block;
+    height: 50px;
+    width: 50px;
+    float: left;
 
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius: 50%;
+    border-radius:50px;
+    border: 5px solid limegreen;
+}
+.user_logo img{
+    height: 100%;
+    width: 100%;
+}
+.user_name{
+    display: block;
+    float: left;
+}
+.user_name p,.user_name-solo p{
+    font-weight: bold;
+    vertical-align: middle;
+    margin-left: 20px;
+    padding-top: 15px;
+    padding-top: 10px;
+    font-size: 1.5em;
+}
+.card-bd{
+    border-bottom: 1px solid #F8F8F8;
+}
+.card{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
+}
+.user_logo-solo{
+    height: 150px;
+    width: 150px;
+    float: none;
+    border-radius:150px;
+    margin: 0 auto;
+    margin-top:15px;
+}
+.user_name-solo{
+    display: block;
+    float: none;
+    margin: 0 auto;
+    padding-top: 30px;
+
+}
+.user_name-solo p{
+    margin: 0;
+    text-align: center;
+    font-size: 1.7em;
+}
 @media only screen and (max-width: 750px) {
 
     a, ul, li {
@@ -205,4 +260,60 @@ a, ul, li {
         content: "\e60c";
         visibility: hidden;
     }
+    .user_logo{
+        display: block;
+        height: 50px;
+        width: 50px;
+        float: left;
+
+        overflow:hidden;
+        -webkit-border-radius:50px;
+        -moz-border-radius: 50%;
+        border-radius:50px;
+        border: 5px solid limegreen;
+    }
+    .user_logo-solo{
+        height: 150px;
+        width: 150px;
+        float: none;
+        border-radius:150px;
+        margin: 0 auto;
+        margin-top:15px;
+    }
+
+    .user_logo img{
+        height: 100%;
+        width: 100%;
+    }
+    .user_name{
+        display: block;
+        float: left;
+    }
+    .user_name-solo{
+        display: block;
+        float: none;
+        margin: 0 auto;
+        padding-top: 15px;
+
+    }
+    .user_name p,.user_name-solo p{
+        font-weight: bold;
+        margin-left: 20px;
+        padding-top: 10px;
+        font-size: 1.3em;
+    }
+    .user_name-solo p{
+        margin: 0;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .card-bd{
+        border-bottom: 1px solid #F8F8F8;
+    }
+    .card{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 0;
+    }
+
 }
