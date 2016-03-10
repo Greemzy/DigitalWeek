@@ -12,6 +12,7 @@
           type='text/css'>
 
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/messages.css') }}" rel="stylesheet">
 
     <!-- Fonts -->
 

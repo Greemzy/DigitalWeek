@@ -52,10 +52,7 @@ class ConversationsController extends Controller
   }
 
   public function getMessages(Conversations $conversations) {
-
-    //conv = Conversations::find($conv_id);
-      //dd($conversations);
-    return view('messages',  ['conversation' => $conversations]);
+        return view('messages',  ['conversation' => $conversations]);
   }
 
   public function addMessage(Request $request, Conversations $conversation)
@@ -63,13 +60,11 @@ class ConversationsController extends Controller
       $data = $request->all();
       $message = new ConversationsMessages();
       $message->content = $data['content'];
-      $message -> user_id = 1;
+      $message -> user_id = Auth::user()->id;
       $message -> conv_id = $conversation->id;
       $message -> read = 0 ;
       $message->created_at = date("Y-m-d H:i:s");
       $message->save();
-
-      dd($message);
 
       return redirect('messages/{$conv_id}');
   }
