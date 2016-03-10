@@ -13,6 +13,7 @@
             <div class="col-xs-12 col-sm-6 col-md-8 grid">
                 <div class="activity">
                     <div class="image-container">
+                      <a href="{{route('user.show', ['user' => $activity->user])}}">
                         <img src="{{ asset('assets/img/'.$activity->type->image) }}" alt="..." class="activitybanner">
                         <div class="after"></div>
                         @if($activity->user->role != "admin")
@@ -25,6 +26,7 @@
                                 </div>
                             </div>
                         @endif
+                      </a>
                     </div>
                     <div class="content">
                         <h3>{{ $activity->name }}</h3>
