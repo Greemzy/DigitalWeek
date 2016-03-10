@@ -5,14 +5,14 @@
         <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
     </a>
     <a href="{{ route('activities.perso') }}" class="icon_activity">
-        <span class="glyphicon glyphicon-knight" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
     </a>
 @endsection
 
 @section('content')
     <br>
 <div class="container">
-    <div class="row">
+    <div class="row" style="background-color:#fff;padding:10px;">
         <div class="col-xs-10 col-sm-10">
         <form class="form" method="POST" enctype="multipart/form-data" action="{{ route('activities.store') }}">
             {{ csrf_field() }}
@@ -40,7 +40,7 @@
                     @endforeach
                 </select>
             </div>
-            <button type="submit" class="btn btn-default">Ajouter</button>
+            <button type="submit" class="btn btn-default btn1" style="color:white">Ajouter</button>
         </form>
         </div>
     </div>
