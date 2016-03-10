@@ -1,19 +1,27 @@
-+--------+----------+--------------------------+---------------+-----------------------------------------------------------------+------------+
-| Domain | Method   | URI                      | Name          | Action                                                          | Middleware |
-+--------+----------+--------------------------+---------------+-----------------------------------------------------------------+------------+
-|        | GET|HEAD | /                        |               | Closure                                                         |            |
-|        | GET|HEAD | conversations            | conversations | App\Http\Controllers\ConversationsController@index              |            |
-|        | GET|HEAD | home                     |               | App\Http\Controllers\HomeController@index                       | web,auth   |
-|        | POST     | login                    |               | App\Http\Controllers\Auth\AuthController@login                  | web,guest  |
-|        | GET|HEAD | login                    |               | App\Http\Controllers\Auth\AuthController@showLoginForm          | web,guest  |
-|        | GET|HEAD | logout                   |               | App\Http\Controllers\Auth\AuthController@logout                 | web        |
-|        | GET|HEAD | messages/{conv_id}       | messages      | App\Http\Controllers\ConversationsController@getMessages        |            |
-|        | POST     | messages/{conv_id}/ajout | message.add   | App\Http\Controllers\ConversationsController@addMessage         |            |
-|        | POST     | password/email           |               | App\Http\Controllers\Auth\PasswordController@sendResetLinkEmail | web,guest  |
-|        | POST     | password/reset           |               | App\Http\Controllers\Auth\PasswordController@reset              | web,guest  |
-|        | GET|HEAD | password/reset/{token?}  |               | App\Http\Controllers\Auth\PasswordController@showResetForm      | web,guest  |
-|        | POST     | register                 |               | App\Http\Controllers\Auth\AuthController@register               | web,guest  |
-|        | GET|HEAD | register                 |               | App\Http\Controllers\Auth\AuthController@showRegistrationForm   | web,guest  |
-|        | GET|HEAD | user                     | user.index    | App\Http\Controllers\UserController@index                       | web        |
-|        | GET|HEAD | user/{user}              | user.show     | App\Http\Controllers\UserController@show                        | web        |
-+--------+----------+--------------------------+---------------+-----------------------------------------------------------------+------------+
++--------+----------+-------------------------------+-----------------------+-----------------------------------------------------------------+------------+
+| Domain | Method   | URI                           | Name                  | Action                                                          | Middleware |
++--------+----------+-------------------------------+-----------------------+-----------------------------------------------------------------+------------+
+|        | GET|HEAD | /                             |                       | Closure                                                         |            |
+|        | GET|HEAD | activities                    | activities.index      | App\Http\Controllers\ActivitiesController@index                 | web,auth   |
+|        | GET|HEAD | activities/create             | activities.create     | App\Http\Controllers\ActivitiesController@create                | web,auth   |
+|        | POST     | activities/more               | activities.more       | App\Http\Controllers\ActivitiesController@more                  | web,auth   |
+|        | GET|HEAD | activities/perso              | activities.perso      | App\Http\Controllers\ActivitiesController@perso                 | web,auth   |
+|        | POST     | activities/store              | activities.store      | App\Http\Controllers\ActivitiesController@store                 | web,auth   |
+|        | GET|HEAD | activities/{activity}/add     | activities.add        | App\Http\Controllers\ActivitiesController@add                   | web,auth   |
+|        | GET|HEAD | admin                         | admin.index           | App\Http\Controllers\AdminController@index                      | web        |
+|        | GET|HEAD | admin/create                  | admin.activity.create | App\Http\Controllers\AdminController@create                     | web        |
+|        | GET|HEAD | conversations                 | conversations         | App\Http\Controllers\ConversationsController@index              | web,auth   |
+|        | GET|HEAD | conversations/{conv_id}       | conversations.show    | App\Http\Controllers\ConversationsController@getMessages        | web,auth   |
+|        | POST     | conversations/{conv_id}/ajout | conversations.add     | App\Http\Controllers\ConversationsController@addMessage         | web,auth   |
+|        | GET|HEAD | home                          |                       | App\Http\Controllers\HomeController@index                       | web,auth   |
+|        | GET|HEAD | login                         |                       | App\Http\Controllers\Auth\AuthController@showLoginForm          | web,guest  |
+|        | POST     | login                         |                       | App\Http\Controllers\Auth\AuthController@login                  | web,guest  |
+|        | GET|HEAD | logout                        |                       | App\Http\Controllers\Auth\AuthController@logout                 | web        |
+|        | POST     | password/email                |                       | App\Http\Controllers\Auth\PasswordController@sendResetLinkEmail | web,guest  |
+|        | POST     | password/reset                |                       | App\Http\Controllers\Auth\PasswordController@reset              | web,guest  |
+|        | GET|HEAD | password/reset/{token?}       |                       | App\Http\Controllers\Auth\PasswordController@showResetForm      | web,guest  |
+|        | GET|HEAD | register                      |                       | App\Http\Controllers\Auth\AuthController@showRegistrationForm   | web,guest  |
+|        | POST     | register                      |                       | App\Http\Controllers\Auth\AuthController@register               | web,guest  |
+|        | GET|HEAD | user                          | user.index            | App\Http\Controllers\UserController@index                       | web,auth   |
+|        | GET|HEAD | user/{user}                   | user.show             | App\Http\Controllers\UserController@show                        | web,auth   |
++--------+----------+-------------------------------+-----------------------+-----------------------------------------------------------------+------------+

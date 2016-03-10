@@ -16,6 +16,7 @@
                     <div class="image-container">
                         <img src="{{ asset('assets/img/'.$activity->type->image) }}" alt="..." class="activitybanner">
                         <div class="after"></div>
+                        @if(Auth::user()->role != "admin")
                         <div class="info">
                             <div class="user_logo">
                                 <img src="{{ asset('assets/img/blank-profile.jpg') }}">
@@ -24,14 +25,17 @@
                                 <p class="white"> {{ $activity->user->firstname}} {{ $activity->user->firstname}}</p>
                             </div>
                         </div>
+                        @endif
                     </div>
                     <div class="content">
-                        <h3>{{ $activity->name }} <br><span class="date"> {{$activity->date_activity}}</span></h3>
+                        <h3>{{ $activity->name }}</h3>
                         <p class="activity_description">
                             {{ $activity->description }}
                         </p>
+                        <span class="date_activity"> {{$activity->date_activity}}</span>
                         <a class="more">voir plus...</a>
                         <a class="less hidden">voir moins...</a>
+
 
                         @if(!is_null($user) && $user->id != $activity->user_id && !$activity->isParticipate())
                             <a class="participate" href="{{route('activities.add', ['activity' => $activity])}}">Je

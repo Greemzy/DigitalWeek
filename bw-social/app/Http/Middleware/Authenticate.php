@@ -28,6 +28,10 @@ class Authenticate
         if (!Auth::check()) {
             return redirect('/login');
         }
+        if(!Auth::user()->role == "user")
+        {
+            return redirect('/admin');
+        }
 
         return $next($request);
     }
