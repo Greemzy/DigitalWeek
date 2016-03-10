@@ -12,6 +12,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        
+        
         DB::table('users')->insert([
             'name' => 'User1',
             'email' => 'user1@hotmail.fr',
@@ -19,6 +21,7 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('User1'),
             'age' => \Carbon\Carbon::create(1989,5,20),
             'id_hotel' => '1',
+            'role' => 'user',
             'rank' => 'Blue'
         ]);
 
@@ -26,10 +29,33 @@ class UsersTableSeeder extends Seeder
             'name' => 'User2',
             'email' => 'user2@hotmail.fr',
             'firstname' => 'User2',
+            'role' => 'admin',
             'password' => bcrypt('User2'),
             'age' => \Carbon\Carbon::create(1989,5,20),
             'id_hotel' => '1',
             'rank' => 'Diamond'
+        ]);
+        
+        
+        
+        DB::table('users')->insert([
+            'name' => 'Parrot',
+            'email' => 'paulparrot23@gmail.com',
+            'firstname' => 'Paul',
+            'password' => bcrypt('321321'),
+            'age' => \Carbon\Carbon::create(1955,6,25),
+            'id_hotel' => '1',
+            'rank' => 'Diamond'
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Brousse',
+            'email' => 'jeanbrousse@hotmail.fr',
+            'firstname' => 'Fourne',
+            'password' => bcrypt('321321'),
+            'age' => \Carbon\Carbon::create(1978,3,12),
+            'id_hotel' => '1',
+            'rank' => 'Gold'
         ]);
     }
 }

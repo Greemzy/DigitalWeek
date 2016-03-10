@@ -25,7 +25,7 @@
     <div class="site-pusher">
         <header class="header">
             <a href="#" class="header__icon" id="header__icon"></a>
-            <a href="/" class="header__logo">Logo</a>
+            <a href="/" class="header__logo">BW Connect</a>
             <nav class="menu">
                 <ul>
 
