@@ -26,12 +26,15 @@ $(".more").on('click', function (e) {
     var next = element.nextElementSibling;
     element.classList.add("hidden");
     prev.classList.add("expand");
-    next.classList.remove("hidden");
     next.classList.add("nohidden");
     e.preventDefault();
     e.stopPropagation();
 });
 
+<<<<<<< HEAD
+function addActivity()
+{
+=======
 $("a.less").on('click', function (e) {
     var element = e.target;
     var prev = element.previousElementSibling;
@@ -47,6 +50,7 @@ $("a.less").on('click', function (e) {
 });
 
 function addActivity() {
+>>>>>>> 823c9afab2cadbb736260302053b8557596fdd73
     var nb = $(".thumbnail").length;
     console.log(nb);
     $.ajax({

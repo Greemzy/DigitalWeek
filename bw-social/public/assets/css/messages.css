@@ -59,6 +59,7 @@ input::-ms-input-placeholder {
 }
 
 #lesMessages{
+  overflow: auto;
   bottom: 110px;
   position: relative;
   width: 100%;
