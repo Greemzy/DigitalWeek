@@ -15,7 +15,7 @@ class TypeActivitiesTableSeeder extends Seeder
         DB::table('types_activities')->insert([
         'name' => 'Culturelle',
         'image' => 'musee.jpg'
-    ]);
+        ]);
         DB::table('types_activities')->insert([
             'name' => 'Detente',
             'image' => 'jacuzzi.jpg'

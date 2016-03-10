@@ -26,9 +26,24 @@ $(".more" ).on('click', function(e) {
     var next = element.nextElementSibling;
     element.classList.add("hidden");
     prev.classList.add("expand");
+    next.classList.remove("hidden");
     next.classList.add("nohidden");
     e.preventDefault();
     e.stopPropagation();
+});
+
+$("a.less" ).on('click', function(e) {
+    var element = e.target;
+    var prev = element.previousElementSibling;
+    var prevprev= prev.previousElementSibling;
+    element.classList.remove("nohidden");
+    element.classList.add("hidden");
+    prev.classList.remove("hidden");
+    prevprev.classList.remove("expand");
+
+
+   // e.preventDefault();
+   // e.stopPropagation();
 });
 
 function addActivity()
