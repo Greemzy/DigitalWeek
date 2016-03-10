@@ -28,30 +28,30 @@
         <header class="header">
             @yield('logo')
             <a href="#" class="header__icon" id="header__icon"></a>
-            <a href="/" class="header__logo">Logo</a>
+            <a href="/" class="header__logo">BW Connect</a>
             <nav class="menu">
                 <ul>
                     <li>
                         <a href="{{ route('user.show',['user' => Auth::user()->id]) }}">
-                            <span class="icon icon-mon-compte"></span>
+                            <i class="fa fa-user icon"></i>
                             <span class="text">Mon compte</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('conversation.index') }}">
-                            <span class="icon icon-mon-compte"></span>
+                            <i class="icon fa fa-commenting"></i>
                             <span class="text">Mes messages</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{route('user.index')}}">
-                            <span class="icon icon-utilisateur"></span>
+                            <i class="icon fa fa-users"></i>
                             <span class="text">Utilisateurs connectés</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('activities.index') }}">
-                            <span class="icon icon-activite"></span>
+                            <i class="icon fa fa-pencil-square-o"></i>
                             <span class="text">Activités</span>
                         </a>
                     </li>
@@ -70,7 +70,7 @@
                         </li>
                     @else
                         <li>
-                            <a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+                            <a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out icon"></i> <span class="text">Login</span></a>
                         </li>
                     @endif
                 </ul>
