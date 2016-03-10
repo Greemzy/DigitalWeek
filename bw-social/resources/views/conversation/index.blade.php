@@ -8,9 +8,9 @@
           $content = $message->last();
       ?>
       @if(!is_null($content))
-        <a style="text-decoration: none;color:black" href="{{route('conversation.show', [ 'conversation' => $conversation->conv_id])}} ">
           <div class="conversation" style="padding: 10px;background-color: white;margin-bottom: 5px;">
-            <div class="row">
+              <a style="text-decoration: none;color:black" href="{{route('conversation.show', [ 'conversation' => $conversation->conv_id])}} ">
+              <div class="row">
                 <div class="col-xs-12">
                     @if($content->user->image)
                         <img class="imageMessages" src="{{ asset('assets/img/'.$content->user->image)}}">

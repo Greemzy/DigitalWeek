@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('logo')
+  <a href="{{ route('conversation.index') }}" class="icon_activity">
+    <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+  </a>
+@endsection
 
 @section('content')
 <div id="messages" class="messages">
