@@ -43,25 +43,26 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'Parrot',
             'email' => 'paulparrot23@gmail.com',
-            'firstname' => 'Paul',
-            'password' => bcrypt('321321'),
+            'firstname' => 'Isabelle',
+            'password' => bcrypt('Paul'),
             'age' => \Carbon\Carbon::create(1955,6,25),
             'id_hotel' => '1',
             'role' => 'user',
             'rank' => 'Diamond',
-            'image'=>'paul.png'
+            'image'=>'isabelle.png'
+
         ]);
 
         DB::table('users')->insert([
-            'name' => 'Brousse',
+            'name' => 'Pousset',
             'email' => 'jeanbrousse@hotmail.fr',
-            'firstname' => 'morgan',
-            'password' => bcrypt('321321'),
+            'firstname' => 'Bruno',
+            'password' => bcrypt('Morgan'),
             'age' => \Carbon\Carbon::create(1978,3,12),
             'id_hotel' => '1',
             'role' => 'user',
             'rank' => 'Gold',
-            'image'=>'Morgan.png'
+            'image'=>'bruno.png'
         ]);
     }
 }

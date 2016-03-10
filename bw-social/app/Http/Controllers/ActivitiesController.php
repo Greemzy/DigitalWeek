@@ -134,9 +134,13 @@ class ActivitiesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Activity $activity)
     {
-        //
+        $user = Auth::user();
+        $users = $activity->participate()->get();
+
+        return view('activities.show', ['activity' => $activity,'user' => $user,'users' => $users]);
+
     }
 
     /**

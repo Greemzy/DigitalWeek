@@ -11,6 +11,13 @@
   margin: 20px;
 }
 
+.imageMessages{
+  width: 50px;
+  border-radius: 30px;
+  margin: 15px;
+  border: solid 4px #122F65;
+}
+
 .title{
   font-size: 30px;
   text-align: center;
@@ -72,6 +79,7 @@ input::-ms-input-placeholder {
 
   .messages {
     width: 100%;
+    min-height: 100vh;
   }
 
   .message{
