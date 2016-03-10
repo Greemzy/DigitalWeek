@@ -27,7 +27,7 @@
     <div class="site-pusher">
         <header class="header">
             @yield('logo')
-            <a href="#" class="header__icon" id="header__icon"></a>
+            <a href="#" class="header__icon" id="header"></a>
             <a href="/" class="header__logo">BW Connect</a>
 
         </header>

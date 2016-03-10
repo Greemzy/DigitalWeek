@@ -10,7 +10,7 @@
                         <img src="{{ asset('assets/img/blank-profile.jpg') }}">
                     </span>
                     <span class="user_name">
-                        <p> {{ $user->firstname}} {{ $user->firstname}}</p>
+                        <p> {{ $user->firstname}} {{ $user->name}}</p>
                     </span>
                     </div>
                 </div>
