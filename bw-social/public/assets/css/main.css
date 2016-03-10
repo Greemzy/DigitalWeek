@@ -35,6 +35,7 @@ a, ul, li {
     z-index: 1;
 }
 
+
 .header__logo {
     font-weight: bold;
     padding: 0 25px;
@@ -143,7 +144,7 @@ a, ul, li {
         -ms-transform: translateX(0px);
         -webkit-transform: translateX(0px);
         transform: translateX(0px);
-        overflow-y: hidden;
+
     }
 
     .site-content {
@@ -249,6 +250,7 @@ a, ul, li {
         line-height: 1rem;
         font-weight: 700;
         letter-spacing: 1px;
+        padding: 5px;
     }
 
     .menu a.active {
@@ -279,6 +281,23 @@ a, ul, li {
         background: url("http://mobile.bestwestern.fr/public/images/homme.png") no-repeat;
         background-size: 100%;
     }
+    .icon-message {
+        background: url("../img/bulles.png") no-repeat;
+        background-size: 100%;
+    }
+    .icon-message:before,.icon-utilisateur:before,.icon-activite:before{
+        content: "\e60c";
+        visibility: hidden;
+    }
+    .icon-utilisateur {
+        background: url("../img/contact.png") no-repeat;
+        background-size: 100%;
+    }
+    .icon-activite {
+        background: url("../img/activites.png") no-repeat;
+        background-size: 100%;
+    }
+
 
     .icon-mon-compte:before {
         content: "\e60c";

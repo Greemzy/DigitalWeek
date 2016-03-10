@@ -33,7 +33,7 @@
                 <input type="datetime" id="datepicker" class="form-control" name="date_activity">
             </div>
             <div class="form-group">
-                <label for="type_id">Thème</label>
+                <label for="type_id">ThÃ¨me</label>
                 <select class="form-control" name="type_id">
                     @foreach($types as $type)
                         <option value="{{$type->id}}">{{$type->name}}</option>
