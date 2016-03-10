@@ -7,7 +7,7 @@
     <div class="message">
       <div class="title">
         @if($message->user->image)
-          <img src="{{ asset('assets/img/'.$message->user->image.}}">
+          <img src="{{ asset('assets/img/'.$message->user->image)}}">
         @else
           <img src="{{ asset('assets/img/blank-profile.jpg') }}">
         @endif
