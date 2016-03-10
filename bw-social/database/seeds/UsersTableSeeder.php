@@ -19,6 +19,7 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('User1'),
             'age' => \Carbon\Carbon::create(1989,5,20),
             'id_hotel' => '1',
+            'role' => 'user',
             'rank' => 'Blue'
         ]);
 
@@ -26,6 +27,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'User2',
             'email' => 'user2@hotmail.fr',
             'firstname' => 'User2',
+            'role' => 'admin',
             'password' => bcrypt('User2'),
             'age' => \Carbon\Carbon::create(1989,5,20),
             'id_hotel' => '1',
