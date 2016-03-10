@@ -8,8 +8,9 @@
                 $message = $conversation->lastMessages;
                 $content = $message->last();
             ?>
+                <a href="{{route('conversation.delete', [ 'conversation' => $conversation->conv_id])}} ">delete</a>
+        
            @if(!is_null($content))
-                <a href="{{route('conversation.delete', [ 'conversation' => $conversation->conv_id])}} ">X</a>
                 <a href="{{route('conversation.show', [ 'conversation' => $conversation->conv_id])}} ">
                     <div class="row">
 
