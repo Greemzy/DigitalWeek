@@ -26,24 +26,9 @@ $(".more" ).on('click', function(e) {
     var next = element.nextElementSibling;
     element.classList.add("hidden");
     prev.classList.add("expand");
-    next.classList.remove("hidden");
     next.classList.add("nohidden");
     e.preventDefault();
     e.stopPropagation();
-});
-
-$("a.less" ).on('click', function(e) {
-    var element = e.target;
-    var prev = element.previousElementSibling;
-    var prevprev= prev.previousElementSibling;
-    element.classList.remove("nohidden");
-    element.classList.add("hidden");
-    prev.classList.remove("hidden");
-    prevprev.classList.remove("expand");
-
-
-   // e.preventDefault();
-   // e.stopPropagation();
 });
 
 function addActivity()
@@ -61,9 +46,6 @@ function addActivity()
                 $.each(jsonResponse, function(){
                     console.log(this);
                     $("#list_activity").append("<div class=\"col-xs-12 col-sm-6 col-md-8\"><div class=\"thumbnail\"><img src=\"assets/img/"+ this.type.image +"\" alt=\"...\"><div class=\"caption\"><h3>"+ this.name +"<br><span class=\"date\">"+ this.date_activity+"</span></h3><p class=\"activity_description\">"+ this.description+"</p><a class=\"more\">voir plus...</a><a class=\"participate\" href=\"\">Je participe</a></div></div></div>");
-                    document.getElementById('lesMessages').scrollTop = document.getElementById('lesMessages').scrollHeight;
-                    console.log('hauteur de la div ', document.getElementById('lesMessages').scrollHeight);
-                    console.log('element?', document.getElementById('lesMessages').scrollTop);
                 });
 
             }
