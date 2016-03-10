@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('logo')
     <a href="{{ route('activities.create') }}" class="icon_activity">
-        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
     </a>
     <a href="{{ route('activities.perso') }}" class="icon_activity">
-        <span class="glyphicon glyphicon-knight" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
     </a>
 @endsection
 
@@ -35,8 +35,8 @@
                             {{ $activity->description }}
                         </p>
                         <span class="date_activity"> {{$activity->date_activity}}</span>
-                        <a class="more">voir plus...</a>
-                        <a class="less hidden">voir moins...</a>
+                        <a class="more">Voir plus...</a>
+                        <a class="less hidden">Voir moins...</a>
 
 
                         @if(!is_null($user) && $user->id != $activity->user_id && !$activity->isParticipate())
@@ -52,7 +52,7 @@
     </div>
     <div class="row grid">
         <div class="text-center">
-            <button onclick="addActivity()" id="loadmore" class="btn-plus">
+            <button onclick="addActivity()" id="loadmore" class="btn1" style="color:white;padding:5px;margin-bottom:20px;">
                 Plus d'activitées
             </button>
         </div>
