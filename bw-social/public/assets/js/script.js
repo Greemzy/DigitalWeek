@@ -31,10 +31,6 @@ $(".more").on('click', function (e) {
     e.stopPropagation();
 });
 
-<<<<<<< HEAD
-function addActivity()
-{
-=======
 $("a.less").on('click', function (e) {
     var element = e.target;
     var prev = element.previousElementSibling;
@@ -50,7 +46,6 @@ $("a.less").on('click', function (e) {
 });
 
 function addActivity() {
->>>>>>> 823c9afab2cadbb736260302053b8557596fdd73
     var nb = $(".thumbnail").length;
     console.log(nb);
     $.ajax({
