@@ -56,21 +56,20 @@ class ConversationsController extends Controller
     ->orderBy('conversations_messages.created_at', 'asc')->take(10)->get();
     return view('messages',  ['messages' => $messages]);
   }
-/*
-  public function addMessage(Request $request, $conv_id)
+
+  public function addMessage($conv_id, Request $request)
   {
     $user = Auth::user();
-      dd($user);
-      dd($request);
       $message = ConversationsMessages::create($request->all());
       $message -> user_id = 1;
       $message -> conv_id = $conv_id;
       $message -> content = 'iygiygiyg';
-      $message -> read = 0 ;
+      $message -> read = 0;
       $message->created_at = date("Y-m-d H:i:s");
+      dd($message);
       $message->save();
 
       return redirect('messages/{$conv_id}');
-  }*/
+  }
 
 }

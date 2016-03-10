@@ -4,6 +4,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
 }
 
 a, ul, li {
@@ -57,7 +58,7 @@ a, ul, li {
     a, ul, li {
         float : none;
     }
-    
+
     .site-pusher, .site-container {
         height: 100%;
     }
