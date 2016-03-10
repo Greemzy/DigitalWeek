@@ -4,7 +4,7 @@
     <div class="row">
         <div class="container">
                 <div class="user_logo user_logo-solo">
-                    <img src="{{ asset('assets/img/blank-profile.jpg') }}">
+                    <img src="{{ asset('assets/img/'.$user->image) }}">
                 </div>
         </div>
 
@@ -12,7 +12,7 @@
     <div class="row">
         <div class="container">
             <div class="user_name-solo">
-                <p> {{ $user->firstname}} {{ $user->firstname}}</p>
+                <p> {{ $user->firstname}} {{ $user->name}}</p>
             </div>
         </div>
     </div>
