@@ -63,7 +63,7 @@ class ConversationsController extends Controller
       $message->conv_id = $conversation->id;
       $message->save();
 
-      return redirect(route('conversation.show', ['conversation' => $conversation]));
+      return redirect(route('conversation.show', ['conversation' => $conversation->id]));
   }
 
 }
