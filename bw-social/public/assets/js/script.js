@@ -26,7 +26,6 @@ $(".more").on('click', function (e) {
     var next = element.nextElementSibling;
     element.classList.add("hidden");
     prev.classList.add("expand");
-    next.classList.remove("hidden");
     next.classList.add("nohidden");
     e.preventDefault();
     e.stopPropagation();
