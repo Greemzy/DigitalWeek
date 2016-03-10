@@ -1,6 +1,7 @@
 .messages {
   margin: 0 auto;
   width: 50%;
+  background-color: #eee;
 }
 
 .message{
@@ -59,6 +60,7 @@ input::-ms-input-placeholder {
 }
 
 #lesMessages{
+  overflow: auto;
   bottom: 110px;
   position: relative;
   width: 100%;

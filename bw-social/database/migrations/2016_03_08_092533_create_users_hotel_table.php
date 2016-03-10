@@ -26,6 +26,6 @@ class CreateUsersHotelTable extends Migration
     public function down()
     {
         
-        Schema::drop('users_hotel');
+       // Schema::drop('users_hotel');
     }
 }

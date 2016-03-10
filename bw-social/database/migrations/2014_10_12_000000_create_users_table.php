@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password', 60);
             $table->dateTime('age')->nullable();
             $table->string('rank');
+            $table->string('role');
             $table->integer('id_hotel')->nullable();
             $table->rememberToken();
             $table->timestamps();

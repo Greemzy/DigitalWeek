@@ -31,6 +31,8 @@ Route::get('/', function () {
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
     Route::get('/home',['as' => 'home', 'uses' => 'HomeController@index'] );
+    Route::get('/admin',['as' => 'admin.index', 'uses' => 'AdminController@index']);
+    Route::get('/admin/create',['as' => 'admin.activity.create', 'uses' => 'AdminController@create']);
     Route::group(['middleware' => 'auth'], function () {
         Route::get('/activities', ['as' => 'activities.index', 'uses' => 'ActivitiesController@index']);
         Route::get('/activities/create', ['as' => 'activities.create', 'uses' => 'ActivitiesController@create']);

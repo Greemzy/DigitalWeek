@@ -104,8 +104,14 @@ class ActivitiesController extends Controller
         $activity->user_id = 1;
         $activity->hotel_id = 1;
         $activity->save();
-
-        return redirect(route('activities.index'));
+        if(Auth::user()->role == "admin")
+        {
+            return redirect(route('admin.index'));
+        }
+        else
+        {
+            return redirect(route('activities.index'));
+        }
     }
 
     public function add(Activity $activity){

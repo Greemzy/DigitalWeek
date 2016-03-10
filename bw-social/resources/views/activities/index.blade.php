@@ -16,6 +16,7 @@
                     <div class="image-container">
                         <img src="{{ asset('assets/img/'.$activity->type->image) }}" alt="..." class="activitybanner">
                         <div class="after"></div>
+                        @if(Auth::user()->role == "admin")
                         <div class="info">
                             <div class="user_logo">
                                 <img src="{{ asset('assets/img/blank-profile.jpg') }}">
@@ -24,6 +25,7 @@
                                 <p class="white"> {{ $activity->user->firstname}} {{ $activity->user->firstname}}</p>
                             </div>
                         </div>
+                        @endif
                     </div>
                     <div class="content">
                         <h3>{{ $activity->name }}</h3>
