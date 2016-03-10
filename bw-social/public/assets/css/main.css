@@ -4,16 +4,15 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    overflow-y: hidden;
 }
 
 a, ul, li {
     text-decoration: none;
     color: inherit;
     list-style: none;
-    float : left;
+    float: left;
 }
-
 
 .container {
     margin: 0 20px;
@@ -33,6 +32,7 @@ a, ul, li {
     line-height: 66px;
     color: #FFF;
     background-color: #002674;
+    z-index: 1;
 }
 
 .header__logo {
@@ -52,27 +52,31 @@ a, ul, li {
 .menu a:hover {
     color: #ffd511;
 }
-.user_logo{
+
+.user_logo {
     display: block;
     height: 50px;
     width: 50px;
     float: left;
 
-    overflow:hidden;
-    -webkit-border-radius:50px;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
     -moz-border-radius: 50%;
-    border-radius:50px;
+    border-radius: 50px;
     border: 5px solid limegreen;
 }
-.user_logo img{
+
+.user_logo img {
     height: 100%;
     width: 100%;
 }
-.user_name{
+
+.user_name {
     display: block;
     float: left;
 }
-.user_name p,.user_name-solo p{
+
+.user_name p, .user_name-solo p {
     font-weight: bold;
     vertical-align: middle;
     margin-left: 20px;
@@ -80,40 +84,48 @@ a, ul, li {
     padding-top: 10px;
     font-size: 1.5em;
 }
-.card-bd{
+
+.card-bd {
     border-bottom: 1px solid #F8F8F8;
 }
-.card{
+
+.card {
     padding-top: 15px;
     padding-bottom: 15px;
     margin: 0;
 }
-.user_logo-solo{
+
+.user_logo-solo {
     height: 150px;
     width: 150px;
     float: none;
-    border-radius:150px;
+    border-radius: 150px;
     margin: 0 auto;
-    margin-top:15px;
+    margin-top: 15px;
 }
-.user_name-solo{
+
+.user_name-solo {
     display: block;
     float: none;
     margin: 0 auto;
     padding-top: 30px;
 
 }
-.user_name-solo p{
+
+.user_name-solo p {
     margin: 0;
     text-align: center;
     font-size: 1.7em;
 }
+
 @media only screen and (max-width: 750px) {
 
     a, ul, li {
-        float : none;
+        float: none;
     }
-
+    .grid{
+        background-color: #F8F8F8;
+    }
     .site-pusher, .site-container {
         height: 100%;
     }
@@ -131,6 +143,7 @@ a, ul, li {
         -ms-transform: translateX(0px);
         -webkit-transform: translateX(0px);
         transform: translateX(0px);
+
     }
 
     .site-content {
@@ -152,7 +165,8 @@ a, ul, li {
     .menu.icon {
         font-size: 2rem;
     }
-    .icon-mon-compte{
+
+    .icon-mon-compte {
         font-style: normal;
         font-weight: normal;
         font-variant: normal;
@@ -197,7 +211,7 @@ a, ul, li {
         -ms-transform: translateX(-250px);
         -webkit-transform: translateX(-250px);
         transform: translateX(-250px);
-        background-image : url("http://mobile.bestwestern.fr/public/images/img_v3/bg_menu.png");
+        background-image: url("http://mobile.bestwestern.fr/public/images/img_v3/bg_menu.png");
         background-position: center;
         background-position-x: 50%;
         background-position-y: 50%;
@@ -210,12 +224,14 @@ a, ul, li {
         text-decoration: none;
         padding: 0;
     }
+
     .menu ul {
         font-size: 0.75rem;
         padding: 0;
         margin: 0;
         list-style: none;
     }
+
     .menu ul li {
         position: relative;
         margin: 0 2%;
@@ -226,6 +242,7 @@ a, ul, li {
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         vertical-align: baseline;
     }
+
     .text {
         text-transform: uppercase;
         vertical-align: 50%;
@@ -233,7 +250,11 @@ a, ul, li {
         font-weight: 700;
         letter-spacing: 1px;
     }
-    .menu a.active { color: #ffd511; }
+
+    .menu a.active {
+        color: #ffd511;
+    }
+
     .with--sidebar .site-pusher {
         -moz-transform: translateX(250px);
         -ms-transform: translateX(250px);
@@ -249,78 +270,103 @@ a, ul, li {
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.6);
     }
+
     .icon {
         font-size: 2rem;
     }
+
     .icon-mon-compte {
         background: url("http://mobile.bestwestern.fr/public/images/homme.png") no-repeat;
         background-size: 100%;
     }
+    .icon-message {
+        background: url("http://mobile.bestwestern.fr/public/images/homme.png") no-repeat;
+        background-size: 100%;
+    }
+    .icon-utilisateur {
+        background: url("http://mobile.bestwestern.fr/public/images/homme.png") no-repeat;
+        background-size: 100%;
+    }
+    .icon-activite {
+        background: url("http://mobile.bestwestern.fr/public/images/homme.png") no-repeat;
+        background-size: 100%;
+    }
+
+
+
     .icon-mon-compte:before {
         content: "\e60c";
         visibility: hidden;
     }
 
-    .user_logo{
+    .user_logo {
         display: block;
         height: 50px;
         width: 50px;
         float: left;
 
-        overflow:hidden;
-        -webkit-border-radius:50px;
+        overflow: hidden;
+        -webkit-border-radius: 50px;
         -moz-border-radius: 50%;
-        border-radius:50px;
+        border-radius: 50px;
         border: 5px solid limegreen;
     }
-    .user_logo-solo{
+
+    .user_logo-solo {
         height: 150px;
         width: 150px;
         float: none;
-        border-radius:150px;
+        border-radius: 150px;
         margin: 0 auto;
-        margin-top:15px;
+        margin-top: 15px;
     }
 
-    .user_logo img{
+    .user_logo img {
         height: 100%;
         width: 100%;
     }
-    .user_name{
+
+    .user_name {
         display: block;
         float: left;
     }
-    .user_name-solo{
+
+    .user_name-solo {
         display: block;
         float: none;
         margin: 0 auto;
         padding-top: 15px;
 
     }
-    .user_name p,.user_name-solo p{
+
+    .user_name p, .user_name-solo p {
         font-weight: bold;
         margin-left: 20px;
         padding-top: 10px;
         font-size: 1.3em;
     }
-    .user_name-solo p{
+
+    .user_name-solo p {
         margin: 0;
         text-align: center;
         font-size: 1.5em;
     }
-    .card-bd{
-        border-bottom: 1px solid #F8F8F8;
+
+    .card-bd {
+        border-bottom: 3px solid #F8F8F8;
     }
-    .card{
+
+    .card {
         padding-top: 15px;
         padding-bottom: 15px;
         margin: 0;
     }
 
-    #list_activity{
+    #list_activity {
         background-color: #222;
     }
-    .activity{
+
+    .activity {
         display: block;
         margin-bottom: 20px;
         line-height: 1.42857143;
@@ -330,6 +376,7 @@ a, ul, li {
     .image-container {
         position: relative;
     }
+
     .image-container .after {
         position: absolute;
         top: 0;
@@ -338,61 +385,110 @@ a, ul, li {
         height: 100%;
         color: #FFF;
     }
+
     .image-container .after {
         display: block;
         background: rgba(0, 0, 0, .6);
     }
 
-    .activity img{
+    .activity img {
         margin-right: auto;
         margin-left: auto;
         display: block;
         width: 100%;
-        height: auto;
     }
-
-    .activity .content{
+    img.activitybanner{
+        height: 150px;
+    }
+    .activity .content {
         padding: 9px;
         color: #333;
         padding-bottom: 40px;
     }
 
-    .icon_activity{
-        float:right;
+    .icon_activity {
+        float: right;
         padding-right: 40px;
+    }
+    .btn-plus {
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        background: #b8b8b8;
+        padding: 5px 15px 5px 15px;
+        text-decoration: none;
+        margin-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .btn-plus:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
     }
 }
 
-.activity_description{
+.activity_description {
     text-overflow: ellipsis;
     overflow: hidden;
     height: 25px;
 }
 
-.date{
+.date {
     font-size: 12px;
 }
 
-.more{
+.more {
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+}
+.less{
     float: right;
     padding: 10px;
     cursor: pointer;
 }
 
-.participate{
+.participate {
     display: none;
     float: right;
     padding: 10px;
 }
 
-.expand{
+.expand {
     height: auto !important;
 }
 
-.hidden{
+p.activity_description.expand {
+    -webkit-transition: max-height 1s;
+    -moz-transition: max-height 1s;
+    -ms-transition: max-height 1s;
+    -o-transition: max-height 1s;
+    transition: max-height 1s;
+    overflow: hidden;
+
+}
+
+.hidden {
     display: none;
 }
 
-.nohidden{
+.nohidden {
     display: block;
+}
+.info{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+p.white{
+    color: ghostwhite;
+    font-weight: normal;
 }

@@ -12,10 +12,10 @@ class CreateUsersHotelTable extends Migration
      */
     public function up()
     {
-         Schema::create('users_hotel', function (Blueprint $table) {
+         /*Schema::create('users_hotel', function (Blueprint $table) {
             $table->integer('id_hotel');
             $table->integer('id_user');
-        });
+        });*/
     }
 
     /**

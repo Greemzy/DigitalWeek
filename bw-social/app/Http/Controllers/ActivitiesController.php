@@ -43,7 +43,8 @@ class ActivitiesController extends Controller
 
                 if($activities->count() > 0){
                     foreach($activities as $act){
-                        $act->image = $act->type->image;
+                        $act->image = $act->type;
+                        $act->useract = $act->user;
                     }
 
                     if(!is_null($activities))
