@@ -366,7 +366,10 @@ a, ul, li {
         padding-bottom: 15px;
         margin: 0;
     }
-
+    .centertxt{
+        text-align: center;
+        padding-top: 20px;
+    }
     #list_activity {
         background-color: #222;
     }
