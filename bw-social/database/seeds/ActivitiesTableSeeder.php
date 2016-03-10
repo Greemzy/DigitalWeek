@@ -32,7 +32,7 @@ Le golf ne prend son essor qu\'en deuxième partie du xixe siècle avec l\'arriv
             'location' => 'Paris',
             'description' => 'Le musée du Louvre est un musée d\'art et d\'antiquités situé au centre de Paris dans le palais du Louvre. C\'est l\'un des plus grands musées du monde, et le plus grand de Paris, par sa surface d\'exposition de 60 600 m27, et ses collections qui comprennent près de 460 000 œuvres. Celles-ci présentent l\'art occidental du Moyen Âge à 1848, ceux des civilisations antiques qui l\'ont précédé et influencé (orientales, égyptienne, grecque, étrusque et romaine), et les arts des premiers chrétiens et de l\'Islam.',
             'hotel_id' => 2,
-            'user_id' => 1,
+            'user_id' => 2,
             'type_id' => 1
         ]);
 
@@ -46,7 +46,7 @@ Les éléments caractéristiques d\'une soirée sont la présence de nourriture 
 
 Certaines soirées sont organisées en l\'honneur d\'une personne en particulier, d\'un jour ou d\'un événement (dans certains cas on parle aussi de fête)',
             'hotel_id' => 2,
-            'user_id' => 2,
+            'user_id' => 1,
             'type_id' => 4
         ]);
     }

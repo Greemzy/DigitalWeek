@@ -40,6 +40,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/activities', ['as' => 'activities.index', 'uses' => 'ActivitiesController@index']);
+        Route::get('/activities/{activity}/show', ['as' => 'activities.show', 'uses' => 'ActivitiesController@show']);
         Route::get('/activities/create', ['as' => 'activities.create', 'uses' => 'ActivitiesController@create']);
         Route::post('/activities/store', ['as' => 'activities.store', 'uses' => 'ActivitiesController@store']);
         Route::post('/activities/more', ['as' => 'activities.more', 'uses' => 'ActivitiesController@more']);

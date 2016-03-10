@@ -10,33 +10,28 @@
 
 @section('content')
     <div class="row" id="list_activity">
-        @foreach($activities as $activity)
-            <a href="{{ route('activities.show', [ '$activity' => $activity->id]) }}">
-
             <div class="col-xs-12 col-sm-6 col-md-8 grid">
                 <div class="activity">
                     <div class="image-container">
                         <img src="{{ asset('assets/img/'.$activity->type->image) }}" alt="..." class="activitybanner">
                         <div class="after"></div>
                         @if($activity->user->role != "admin")
-                        <div class="info">
-                            <div class="user_logo">
-                                <img src="{{ asset('assets/img/'.$activity->user->image) }}">
+                            <div class="info">
+                                <div class="user_logo">
+                                    <img src="{{ asset('assets/img/'.$activity->user->image) }}">
+                                </div>
+                                <div class="user_name">
+                                    <p class="white"> {{ $activity->user->firstname}} {{ $activity->user->name}}</p>
+                                </div>
                             </div>
-                            <div class="user_name">
-                                <p class="white"> {{ $activity->user->firstname}} {{ $activity->user->name}}</p>
-                            </div>
-                        </div>
                         @endif
                     </div>
                     <div class="content">
                         <h3>{{ $activity->name }}</h3>
-                        <p class="activity_description">
+                        <p class="">
                             {{ $activity->description }}
                         </p>
                         <span class="date_activity"> {{$activity->date_activity}}</span>
-                        <a class="more">voir plus...</a>
-                        <a class="less hidden">voir moins...</a>
 
 
                         @if(!is_null($user) && $user->id != $activity->user_id && !$activity->isParticipate())
@@ -45,16 +40,11 @@
                         @endif
                     </div>
                 </div>
+                <ul>Liste des participants</ul>
+                @foreach($users as $use)
+                    <li>{{ $use->firstname}} {{$use->name}}</li>
+                @endforeach
             </div>
-            </a>
+    </div>
 
-        @endforeach
-    </div>
-    <div class="row grid">
-        <div class="text-center">
-            <button onclick="addActivity()" id="loadmore" class="btn-plus">
-                Plus d'activitées
-            </button>
-        </div>
-    </div>
 @endsection
