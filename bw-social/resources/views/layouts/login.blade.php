@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>BestWestern Social</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -25,35 +24,11 @@
 <div class="site-container">
     <div class="site-pusher">
         <header class="header">
-            @yield('logo')
             <a href="#" class="header__icon" id="header__icon"></a>
             <a href="/" class="header__logo">Logo</a>
             <nav class="menu">
                 <ul>
-                    <li>
-                        <a href="{{ route('user.show',['user' => Auth::user()->id]) }}">
-                            <span class="icon icon-mon-compte"></span>
-                            <span class="text">Mon compte</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon icon-mon-compte"></span>
-                            <span class="text">Mes messages</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('user.index')}}">
-                            <span class="icon icon-mon-compte"></span>
-                            <span class="text">Utilisateurs connectés</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('activities.index') }}">
-                            <span class="icon icon-mon-compte"></span>
-                            <span class="text">Activités</span>
-                        </a>
-                    </li>
+
                     @if (Auth::guest())
                         <li>
                             <a href="{{ url('/login') }}">
