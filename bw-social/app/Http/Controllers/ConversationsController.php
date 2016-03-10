@@ -34,5 +34,13 @@ class ConversationsController extends Controller
 
       return redirect(route('conversations.show', ['conv_id' => $conversation]));
   }
+    
+    
+  public function deleteConversation(Conversations $conversation) {
+      
+      $conversation->delete();
+
+      return redirect(route('conversations'));
+  }
 
 }

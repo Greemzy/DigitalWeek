@@ -4,6 +4,8 @@
     <div class="container" style="margin:auto;">
     @if(!is_null($user))
         @foreach($user->conversations as $conversation)
+        
+        <a href="{{route('conversations.delete', [ 'conv_id' => $conversation->conv_id])}} "> XXXXXXXXXXXXXXXXX</a><br>
             <a href="{{route('conversations.show', [ 'conv_id' => $conversation->conv_id])}} ">
                 <div class="row">
                     <?php
