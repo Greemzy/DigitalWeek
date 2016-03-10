@@ -20,6 +20,7 @@ class Activity extends Model
     protected $hidden = [];
 
     public $image;
+    public $useract;
 
     public function user(){
         return $this->belongsTo('App\User');

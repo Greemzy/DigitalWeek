@@ -142,7 +142,7 @@ a, ul, li {
         -ms-transform: translateX(0px);
         -webkit-transform: translateX(0px);
         transform: translateX(0px);
-        overflow-y: hidden;
+
     }
 
     .site-content {
@@ -278,6 +278,20 @@ a, ul, li {
         background: url("http://mobile.bestwestern.fr/public/images/homme.png") no-repeat;
         background-size: 100%;
     }
+    .icon-message {
+        background: url("http://mobile.bestwestern.fr/public/images/homme.png") no-repeat;
+        background-size: 100%;
+    }
+    .icon-utilisateur {
+        background: url("http://mobile.bestwestern.fr/public/images/homme.png") no-repeat;
+        background-size: 100%;
+    }
+    .icon-activite {
+        background: url("http://mobile.bestwestern.fr/public/images/homme.png") no-repeat;
+        background-size: 100%;
+    }
+
+
 
     .icon-mon-compte:before {
         content: "\e60c";

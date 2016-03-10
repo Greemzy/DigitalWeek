@@ -39,19 +39,19 @@
                     </li>
                     <li>
                         <a href="#">
-                            <span class="icon icon-mon-compte"></span>
+                            <span class="icon icon-message"></span>
                             <span class="text">Mes messages</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{route('user.index')}}">
-                            <span class="icon icon-mon-compte"></span>
+                            <span class="icon icon-utilisateur"></span>
                             <span class="text">Utilisateurs connectés</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('activities.index') }}">
-                            <span class="icon icon-mon-compte"></span>
+                            <span class="icon icon-activite"></span>
                             <span class="text">Activités</span>
                         </a>
                     </li>
