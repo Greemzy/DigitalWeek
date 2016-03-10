@@ -57,7 +57,7 @@ class ConversationsController extends Controller
         $user = Auth::user();
         $conversationUsers = ConversationsUsers::where('user_id', '=' , $user->id)->where('conv_id', '=', $conversation->id)->delete();
 
-        return redirect(route('conversation'));
+        return redirect(route('conversation.index'));
     }
 
   public function addMessage(Request $request, Conversations $conversation)
