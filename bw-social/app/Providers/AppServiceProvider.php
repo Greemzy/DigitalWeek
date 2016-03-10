@@ -29,6 +29,10 @@ class AppServiceProvider extends ServiceProvider
       \Blade::directive('datetime', function($expression) {
             return "<?php echo 'posté le '. with{$expression}->format('d/m/Y'); ?>";
         });
+
+        \Blade::directive('datetimea', function($expression) {
+            return "<?php echo with{$expression}->format('d/m/Y'); ?>";
+        });
     }
 
     /**

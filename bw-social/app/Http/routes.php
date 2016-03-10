@@ -14,7 +14,11 @@ Route::model('activity', 'App\Activity');
 Route::model('conversation', 'App\conversations');
 Route::model('user', 'App\User');
 Route::get('/', function () {
-    return redirect(route('home'));
+    return redirect(route('activities.index'));
+});
+
+Route::get('/home', function () {
+    return redirect(route('activities.index'));
 });
 
 /*
@@ -33,7 +37,7 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::auth();
 
-    Route::get('/home',['as' => 'home', 'uses' => 'HomeController@index'] );
+    //Route::get('/home',['as' => 'home', 'uses' => 'HomeController@index'] );
     Route::get('/admin',['as' => 'admin.index', 'uses' => 'AdminController@index']);
     Route::get('/admin/create',['as' => 'admin.activity.create', 'uses' => 'AdminController@create']);
 
