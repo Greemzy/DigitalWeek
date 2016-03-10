@@ -4,6 +4,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
 }
 
 a, ul, li {
@@ -259,6 +260,7 @@ a, ul, li {
         content: "\e60c";
         visibility: hidden;
     }
+
     .user_logo{
         display: block;
         height: 50px;
@@ -315,4 +317,82 @@ a, ul, li {
         margin: 0;
     }
 
+    #list_activity{
+        background-color: #222;
+    }
+    .activity{
+        display: block;
+        margin-bottom: 20px;
+        line-height: 1.42857143;
+        background-color: #fff;
+    }
+
+    .image-container {
+        position: relative;
+    }
+    .image-container .after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #FFF;
+    }
+    .image-container .after {
+        display: block;
+        background: rgba(0, 0, 0, .6);
+    }
+
+    .activity img{
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .activity .content{
+        padding: 9px;
+        color: #333;
+        padding-bottom: 40px;
+    }
+
+    .icon_activity{
+        float:right;
+        padding-right: 40px;
+    }
+}
+
+.activity_description{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 25px;
+}
+
+.date{
+    font-size: 12px;
+}
+
+.more{
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.participate{
+    display: none;
+    float: right;
+    padding: 10px;
+}
+
+.expand{
+    height: auto !important;
+}
+
+.hidden{
+    display: none;
+}
+
+.nohidden{
+    display: block;
 }

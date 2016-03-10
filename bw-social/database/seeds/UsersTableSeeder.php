@@ -14,8 +14,8 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'User1',
+            'email' => 'user1@hotmail.fr',
             'firstname' => 'User1',
-            'email' => 'sageot.ma@hotmail.fr',
             'password' => bcrypt('User1'),
             'age' => \Carbon\Carbon::create(1989,5,20),
             'id_hotel' => '1',
@@ -24,8 +24,8 @@ class UsersTableSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => 'User2',
+            'email' => 'user2@hotmail.fr',
             'firstname' => 'User2',
-            'email' => 'sageot.m@hotmail.fr',
             'password' => bcrypt('User2'),
             'age' => \Carbon\Carbon::create(1989,5,20),
             'id_hotel' => '1',

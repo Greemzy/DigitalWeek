@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Conversations;
 use DB;
-use Illuminate\Http\Requests;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\ConversationsMessages;
@@ -50,27 +51,22 @@ class ConversationsController extends Controller
     return view('conversations', ['other_users' => $other_users]);
   }
 
-  public function getMessages($conv_id) {
-    $messages = ConversationsMessages::where(['conv_id' => $conv_id])
-    ->join('users', 'users.id', '=', 'conversations_messages.id')
-    ->orderBy('conversations_messages.created_at', 'asc')->take(10)->get();
-    return view('messages',  ['messages' => $messages]);
+  public function getMessages(Conversations $conversations) {
+        return view('messages',  ['conversation' => $conversations]);
   }
-/*
-  public function addMessage(Request $request, $conv_id)
+
+  public function addMessage(Request $request, Conversations $conversation)
   {
-    $user = Auth::user();
-      dd($user);
-      dd($request);
-      $message = ConversationsMessages::create($request->all());
-      $message -> user_id = 1;
-      $message -> conv_id = $conv_id;
-      $message -> content = 'iygiygiyg';
+      $data = $request->all();
+      $message = new ConversationsMessages();
+      $message->content = $data['content'];
+      $message -> user_id = Auth::user()->id;
+      $message -> conv_id = $conversation->id;
       $message -> read = 0 ;
       $message->created_at = date("Y-m-d H:i:s");
       $message->save();
 
       return redirect('messages/{$conv_id}');
-  }*/
+  }
 
 }
