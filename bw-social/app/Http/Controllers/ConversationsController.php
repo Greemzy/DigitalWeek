@@ -66,7 +66,7 @@ class ConversationsController extends Controller
       $message->created_at = date("Y-m-d H:i:s");
       $message->save();
 
-      return redirect('messages/{$conv_id}');
+      return redirect(route('conversations.show', ['conv_id' => $conversation]));
   }
 
 }

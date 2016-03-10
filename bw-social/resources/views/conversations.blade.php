@@ -5,7 +5,7 @@
 
     @foreach($other_users as $other_user)
         @foreach($other_user as $user)
-             <a href="/messages/{{ $user->conv_id}}">
+             <a href="{{route('conversations.show', [ 'conv_id' => $user->conv_id])}} ">
               <div class="row">
                 <div class="col-xs-3 text-center"> {{ $user->name}} {{ $user->email}}
                 </div>

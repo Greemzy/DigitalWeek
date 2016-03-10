@@ -40,8 +40,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('user','UserController', ['only' => ['index', 'show']]);
 
     Route::get('conversations', ['as' => 'conversations', 'uses' => 'ConversationsController@index']);
-    Route::get('conversations/{conv_id}', ['as' => 'messages', 'uses' => 'ConversationsController@getMessages']);
-    Route::post('conversations/{conv_id}/ajout', ['as' => 'message.add', 'uses' => 'ConversationsController@addMessage']);
+    Route::get('conversations/{conv_id}', ['as' => 'conversations.show', 'uses' => 'ConversationsController@getMessages']);
+    Route::post('conversations/{conv_id}/ajout', ['as' => 'conversations.add', 'uses' => 'ConversationsController@addMessage']);
 });
 
 
