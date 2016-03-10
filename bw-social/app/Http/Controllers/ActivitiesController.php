@@ -21,12 +21,13 @@ class ActivitiesController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $activities = Activity::where('date_activity', '>=' , Carbon::now())
             ->orderBy('date_activity', 'desc')
             ->take(4)
             ->get();
 
-        return view('activities.index', ['activities' => $activities]);
+        return view('activities.index', ['activities' => $activities, 'user' => $user]);
     }
 
     public function more(){
@@ -64,14 +65,19 @@ class ActivitiesController extends Controller
     public function perso()
     {
         $user = Auth::user();
-        $activities = Activity::where('user_id', '=', '1')->get();
+        if(!is_null($user)){
+            $activities = Activity::where('user_id', '=', '1')->get();
 
-        $activitiesAll = $activities;
-        foreach($user->userActivity as $act){
-            $activitiesAll->push($act->activity);
+            $activitiesAll = $activities;
+            foreach($user->userActivity as $act){
+                $activitiesAll->push($act->activity);
+            }
+
+            return view('activities.perso', ['activities' => $activitiesAll]);
         }
 
-        return view('activities.perso', ['activities' => $activitiesAll]);
+        return redirect(route('activities.index'));
+
     }
 
     /**

@@ -11,6 +11,7 @@
 |
 */
 Route::model('activity', 'App\Activity');
+Route::model('conv_id', 'App\conversations');
 Route::get('/', function () {
     return view('welcome');
 });

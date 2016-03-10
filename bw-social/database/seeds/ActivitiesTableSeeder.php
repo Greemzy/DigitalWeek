@@ -16,7 +16,7 @@ class ActivitiesTableSeeder extends Seeder
             'name' => 'Partie de golf',
             'date_activity' => \Carbon\Carbon::create(2016,04,24,9,0,0),
             'location' => '13 Rue de Midori, Jouy-en-Josas',
-            'description' => 'Venez vous joindre à moi pour une petite partie de golf, c\'est cadeau!',
+            'description' => 'Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra temptata, sulcatis lateribus mortisque metu admoto turpi confessione cogitatorum socium, quae nulla erant, fuisse firmavit cum nec vidisset quicquam nec audisset penitus expers forensium rerum; Eusebius vero obiecta fidentius negans, suspensus in eodem gradu constantiae stetit latrocinium illud esse, non iudicium clamans.',
             'hotel_id' => 1,
             'user_id' => 1,
             'type_id' => 3
@@ -26,7 +26,7 @@ class ActivitiesTableSeeder extends Seeder
             'name' => 'Le Louvre',
             'date_activity' => \Carbon\Carbon::create(2016,04,25,11,30,0),
             'location' => 'Paris',
-            'description' => 'De passage aux alentours de Paris, je compte visiter le musee du Louvre, vous pouvez vous joindre a moi si vous le souhaitez.',
+            'description' => 'Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra temptata, sulcatis lateribus mortisque metu admoto turpi confessione cogitatorum socium, quae nulla erant, fuisse firmavit cum nec vidisset quicquam nec audisset penitus expers forensium rerum; Eusebius vero obiecta fidentius negans, suspensus in eodem gradu constantiae stetit latrocinium illud esse, non iudicium clamans.',
             'hotel_id' => 2,
             'user_id' => 1,
             'type_id' => 1
@@ -36,7 +36,7 @@ class ActivitiesTableSeeder extends Seeder
             'name' => 'Ne passez pas la soiree tout seul',
             'date_activity' => \Carbon\Carbon::create(2016,04,25,11,0,0),
             'location' => 'Salle de detente',
-            'description' => 'Vous vous ennuyez le soir ? Rejoignez moi pour discuter, je suis ouvert a tous les sujets',
+            'description' => 'Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra temptata, sulcatis lateribus mortisque metu admoto turpi confessione cogitatorum socium, quae nulla erant, fuisse firmavit cum nec vidisset quicquam nec audisset penitus expers forensium rerum; Eusebius vero obiecta fidentius negans, suspensus in eodem gradu constantiae stetit latrocinium illud esse, non iudicium clamans.',
             'hotel_id' => 2,
             'user_id' => 2,
             'type_id' => 4

@@ -11,7 +11,7 @@ class Conversations extends Model
   protected $fillable = ['id', 'created_at', 'updated_at'];
 
   public function getMessages(){
-    return $this->hasMany('App\ConversationsMessages');
+    return $this->hasMany('App\ConversationsMessages','conv_id');
   }
 
   public function getInterlocutor($userId){

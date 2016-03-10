@@ -49,7 +49,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{ route('activities.index') }}">
                             <span class="icon icon-mon-compte"></span>
                             <span class="text">Activités</span>
                         </a>

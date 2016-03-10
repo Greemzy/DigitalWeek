@@ -17,15 +17,19 @@ class TypeActivitiesTableSeeder extends Seeder
     ]);
         DB::table('types_activities')->insert([
             'name' => 'Detente',
-            'image' => 'spa.jpg'
+            'image' => 'jacuzzi.jpg'
         ]);
         DB::table('types_activities')->insert([
             'name' => 'Sportive',
-            'image' => 'sport-nozay.jpg'
+            'image' => 'accrobranche.jpg'
         ]);
         DB::table('types_activities')->insert([
-            'name' => 'Discussion',
-            'image' => 'bar.jpg'
+            'name' => 'Ballade',
+            'image' => 'randonnee.jpg'
+        ]);
+        DB::table('types_activities')->insert([
+            'name' => 'Musique',
+            'image' => 'concert.jpg'
         ]);
     }
 }
