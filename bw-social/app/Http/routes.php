@@ -28,12 +28,17 @@ Route::get('/', function () {
 |
 */
 
+
 Route::group(['middleware' => 'web'], function () {
+
     Route::auth();
+
     Route::get('/home',['as' => 'home', 'uses' => 'HomeController@index'] );
     Route::get('/admin',['as' => 'admin.index', 'uses' => 'AdminController@index']);
     Route::get('/admin/create',['as' => 'admin.activity.create', 'uses' => 'AdminController@create']);
+
     Route::group(['middleware' => 'auth'], function () {
+
         Route::get('/activities', ['as' => 'activities.index', 'uses' => 'ActivitiesController@index']);
         Route::get('/activities/create', ['as' => 'activities.create', 'uses' => 'ActivitiesController@create']);
         Route::post('/activities/store', ['as' => 'activities.store', 'uses' => 'ActivitiesController@store']);
@@ -48,7 +53,7 @@ Route::group(['middleware' => 'web'], function () {
         /*Route::get('conversations', ['as' => 'conversations', 'uses' => 'ConversationsController@index']);
         Route::get('conversations/{conv_id}', ['as' => 'conversations.show', 'uses' => 'ConversationsController@getMessages']);*/
         Route::post('conversation/{conversation}/ajout', ['as' => 'conversation.add', 'uses' => 'ConversationsController@addMessage']);
-        Route::get('conversation/{conversation}/delete', ['as' => 'conversation.delete', 'uses' => 'ConversationsController@deleteConversation']);
+        Route::get('conversation/{conversation}/delete', ['as' => 'conversation.delete', 'uses' => 'ConversationsController@delete']);
     });
 });
 

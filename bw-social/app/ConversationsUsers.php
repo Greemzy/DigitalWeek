@@ -12,6 +12,8 @@ class ConversationsUsers extends Model
 
   public $timestamps = false;
 
+  public $primaryKey = 'user_id';
+
   public function getConversations(){
     return $this->hasMany('App\Conversations');
   }

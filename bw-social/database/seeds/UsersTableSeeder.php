@@ -15,25 +15,27 @@ class UsersTableSeeder extends Seeder
         
         
         DB::table('users')->insert([
-            'name' => 'User1',
+            'name' => 'Michau',
             'email' => 'user1@hotmail.fr',
-            'firstname' => 'User1',
+            'firstname' => 'Julian',
             'password' => bcrypt('User1'),
             'age' => \Carbon\Carbon::create(1989,5,20),
             'id_hotel' => '1',
             'role' => 'user',
-            'rank' => 'Blue'
+            'rank' => 'Blue',
+            'image'=>'julian.png'
         ]);
 
         DB::table('users')->insert([
-            'name' => 'User2',
+            'name' => 'Sageot',
             'email' => 'user2@hotmail.fr',
-            'firstname' => 'User2',
+            'firstname' => 'Maxime',
             'role' => 'admin',
             'password' => bcrypt('User2'),
             'age' => \Carbon\Carbon::create(1989,5,20),
             'id_hotel' => '1',
-            'rank' => 'Diamond'
+            'rank' => 'Diamond',
+            'image'=>'maxime.png'
         ]);
         
         
@@ -46,18 +48,20 @@ class UsersTableSeeder extends Seeder
             'age' => \Carbon\Carbon::create(1955,6,25),
             'id_hotel' => '1',
             'role' => 'user',
-            'rank' => 'Diamond'
+            'rank' => 'Diamond',
+            'image'=>'paul.png'
         ]);
 
         DB::table('users')->insert([
             'name' => 'Brousse',
             'email' => 'jeanbrousse@hotmail.fr',
-            'firstname' => 'Fourne',
+            'firstname' => 'morgan',
             'password' => bcrypt('321321'),
             'age' => \Carbon\Carbon::create(1978,3,12),
             'id_hotel' => '1',
             'role' => 'user',
-            'rank' => 'Gold'
+            'rank' => 'Gold',
+            'image'=>'Morgan.png'
         ]);
     }
 }

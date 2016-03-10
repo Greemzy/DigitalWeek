@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->dateTime('age')->nullable();
             $table->string('rank');
             $table->string('role');
+            $table->string('image');
             $table->integer('id_hotel')->nullable();
             $table->rememberToken();
             $table->timestamps();
