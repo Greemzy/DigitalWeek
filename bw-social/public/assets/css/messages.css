@@ -12,6 +12,7 @@
 
 .title{
   font-size: 30px;
+  text-align: center;
 }
 
 .content{
@@ -47,11 +48,22 @@
 input::-webkit-input-placeholder {
     color:#000;
 }
+input:-moz-placeholder {
+    color:#000;
+}
 input::-moz-placeholder {
     color:#000;
 }
 input::-ms-input-placeholder {
     color:#000;
+}
+
+#lesMessages{
+  bottom: 110px;
+  position: relative;
+  width: 100%;
+  margin-top: 115px;
+  z-index: 0;
 }
 
 @media only screen and (max-width: 750px) {

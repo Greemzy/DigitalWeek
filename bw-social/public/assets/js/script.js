@@ -75,6 +75,7 @@ function addActivity() {
                         "<p class=\"activity_description\">" + this.description + "</p><a class=\"more\">voir plus...</a>" +
                         "<a class=\"less hidden\">voir moins...</a>"+
                         "<a class=\"participate\" href=\"\">Je participe</a></div></div></div></div>");
+
                 });
 
             }

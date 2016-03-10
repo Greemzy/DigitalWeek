@@ -32,6 +32,7 @@ a, ul, li {
     line-height: 66px;
     color: #FFF;
     background-color: #002674;
+    z-index: 1;
 }
 
 .header__logo {
