@@ -38,7 +38,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{route('conversations')}}">
                             <span class="icon icon-message"></span>
                             <span class="text">Mes messages</span>
                         </a>
