@@ -10,6 +10,7 @@ class ConversationsUsers extends Model
 
   protected $fillable = ['user_id', 'conv_id'];
 
+  public $timestamps = false;
 
   public function getConversations(){
     return $this->hasMany('App\Conversations');

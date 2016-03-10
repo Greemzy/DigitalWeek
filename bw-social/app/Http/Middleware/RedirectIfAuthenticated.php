@@ -26,6 +26,7 @@ class RedirectIfAuthenticated
             {
                 return redirect('/admin');
             }
+
         }
 
         return $next($request);

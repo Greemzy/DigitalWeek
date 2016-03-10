@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "CostaPtf";
+    src: url('../font/CostaPtf-Regular.otf');
+}
+
 html, body {
     font-size: 16px;
     line-height: 1.4;
@@ -40,6 +45,14 @@ a, ul, li {
     font-weight: bold;
     padding: 0 25px;
     float: left;
+    text-transform: uppercase;
+    font-size:32px;
+    font-family: "CostaPtf",sans-serif;
+}
+
+.header__logo:hover {
+    text-decoration: none;
+    color: white;
 }
 
 .menu {
@@ -59,12 +72,11 @@ a, ul, li {
     height: 50px;
     width: 50px;
     float: left;
-
     overflow: hidden;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50%;
     border-radius: 50px;
-    border: 5px solid limegreen;
+    border: 4px solid #60b12c;
 }
 
 .user_logo img {
@@ -75,6 +87,7 @@ a, ul, li {
 .user_name {
     display: block;
     float: left;
+    font-weight: bold;
 }
 
 .user_name p, .user_name-solo p {
@@ -309,12 +322,11 @@ a, ul, li {
         height: 50px;
         width: 50px;
         float: left;
-
         overflow: hidden;
         -webkit-border-radius: 50px;
         -moz-border-radius: 50%;
         border-radius: 50px;
-        border: 5px solid limegreen;
+        border: 4px solid #60b12c;
     }
 
     .user_logo-solo {
@@ -334,6 +346,7 @@ a, ul, li {
     .user_name {
         display: block;
         float: left;
+        font-size:1.2em;
     }
 
     .user_name-solo {
@@ -383,6 +396,8 @@ a, ul, li {
 
     .image-container {
         position: relative;
+        height: 150px;
+        overflow: hidden;
     }
 
     .image-container .after {
@@ -406,7 +421,9 @@ a, ul, li {
         width: 100%;
     }
     img.activitybanner{
-        height: 150px;
+        position: absolute;
+        bottom: 0;
+        min-height: 150px;
     }
     .activity .content {
         padding: 9px;
@@ -443,18 +460,22 @@ a, ul, li {
     }
 }
 
-.activity_description {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    height: 25px;
+h3{
+    font-weight: bold;
 }
 
-.date {
-    font-size: 12px;
+
+.date_activity {
+    float: left;
+    font-size: 14px;
+    padding:10px;
+    color: grey;
+    font-weight: bold;
 }
 
 .more {
     float: right;
+    display : inline-block;
     padding: 10px;
     cursor: pointer;
 }
@@ -470,18 +491,18 @@ a, ul, li {
     padding: 10px;
 }
 
-.expand {
-    height: auto !important;
+.activity_description {
+    max-height: 50px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    overflow: hidden;
 }
 
-p.activity_description.expand {
-    -webkit-transition: max-height 1s;
-    -moz-transition: max-height 1s;
-    -ms-transition: max-height 1s;
-    -o-transition: max-height 1s;
-    transition: max-height 1s;
-    overflow: hidden;
-
+.expand {
+    max-height: 500px;
 }
 
 .hidden {
@@ -499,4 +520,40 @@ p.activity_description.expand {
 p.white{
     color: ghostwhite;
     font-weight: normal;
+}
+
+.backgroundhome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: url('../img/fondhome.jpg') 100% 100%;
+}
+
+.connexion{
+    background-color:rgba(255,255,255,0.8);
+    margin:20px auto;
+    width: 70%;
+}
+
+.btn1 {
+    background: #B40040;
+    background-image: -webkit-linear-gradient(top, #B40040, #C50F5B);
+    background-image: -moz-linear-gradient(top, #B40040, #C50F5B);
+    background-image: -ms-linear-gradient(top, #B40040, #C50F5B);
+    background-image: -o-linear-gradient(top, #B40040, #C50F5B);
+    background-image: linear-gradient(to bottom, #B40040, #C50F5B);
+    border: solid #D03E7A 2px;
+}
+
+.btn1:hover {
+    background: #C50F5B;
+    background-image: -webkit-linear-gradient(top, #C50F5B, #B40040);
+    background-image: -moz-linear-gradient(top, #C50F5B, #B40040);
+    background-image: -ms-linear-gradient(top, #C50F5B, #B40040);
+    background-image: -o-linear-gradient(top, #C50F5B, #B40040);
+    background-image: linear-gradient(to bottom, #C50F5B, #B40040);
+    text-decoration: none;
+    border: solid #D03E7A 2px;
 }
