@@ -5,6 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
+    overflow:hidden;
 }
 
 a, ul, li {
@@ -33,6 +34,7 @@ a, ul, li {
     line-height: 66px;
     color: #FFF;
     background-color: #002674;
+    z-index: 1;
 }
 
 .header__logo {
