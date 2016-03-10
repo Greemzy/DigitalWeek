@@ -53,5 +53,3 @@ Route::group(['middleware' => 'web'], function () {
         Route::post('conversation/{conversation}/ajout', ['as' => 'conversation.add', 'uses' => 'ConversationsController@addMessage']);
     });
 });
-
-
