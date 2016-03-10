@@ -43,12 +43,12 @@ Route::group(['middleware' => 'web'], function () {
         Route::resource('user', 'UserController', ['only' => ['index', 'show']]);
         
         
-        Route::resource('conversation', 'ConversationsController', ['only' => ['index', 'show']]);
+        Route::resource('conversation', 'ConversationsController', ['only' => ['index', 'show', 'delete']]);
         Route::get('conversation/create/{user}', ['as' => 'conversation.create', 'uses' => 'ConversationsController@create']);
         /*Route::get('conversations', ['as' => 'conversations', 'uses' => 'ConversationsController@index']);
         Route::get('conversations/{conv_id}', ['as' => 'conversations.show', 'uses' => 'ConversationsController@getMessages']);*/
         Route::post('conversation/{conversation}/ajout', ['as' => 'conversation.add', 'uses' => 'ConversationsController@addMessage']);
-        Route::get('conversations/{conv_id}/delete', ['as' => 'conversations.delete', 'uses' => 'ConversationsController@deleteConversation']);
+        Route::get('conversation/{conversation}/delete', ['as' => 'conversation.delete', 'uses' => 'ConversationsController@deleteConversation']);
     });
 });
 

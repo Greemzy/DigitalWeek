@@ -71,7 +71,7 @@ class ConversationsController extends Controller
       
       $conversation->delete();
 
-      return redirect(route('conversations'));
+      return redirect(route('conversation'));
   }
 
 }

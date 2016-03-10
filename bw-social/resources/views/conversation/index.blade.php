@@ -4,7 +4,9 @@
     <div class="container" style="margin:auto;">
     @if(!is_null($user))
         @foreach($user->conversations as $conversation)
-            <a href="{{route('conversation.show', [ 'conversation' => $conversation->id])}} ">
+            
+        <a href="{{route('conversation.delete', [ 'conversation' => $conversation->conv_id])}} "> XXXXXXXXXXXXXXXXX</a><br>
+            <a href="{{route('conversation.show', [ 'conversation' => $conversation->conv_id])}} ">
                 <div class="row">
                     <?php
                         $message = $conversation->lastMessages;
