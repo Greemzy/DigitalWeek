@@ -28,13 +28,17 @@ Route::get('/', function () {
 |
 */
 
+
 Route::group(['middleware' => 'web'], function () {
+
     Route::auth();
+    Route::get('/home', 'HomeController@index')->middleware('auth.basic');;
     Route::get('/admin',['as' => 'admin.index', 'uses' => 'AdminController@index']);
     Route::get('/admin/create',['as' => 'admin.activity.create', 'uses' => 'AdminController@create']);
 
-    Route::get('/home', 'HomeController@index');
+
     Route::group(['middleware' => 'auth'], function () {
+
         Route::get('/activities', ['as' => 'activities.index', 'uses' => 'ActivitiesController@index']);
         Route::get('/activities/create', ['as' => 'activities.create', 'uses' => 'ActivitiesController@create']);
         Route::post('/activities/store', ['as' => 'activities.store', 'uses' => 'ActivitiesController@store']);

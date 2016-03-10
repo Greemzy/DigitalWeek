@@ -20,7 +20,7 @@ class RedirectIfAuthenticated
         if (Auth::guard($guard)->check()) {
             if(Auth::user()->role == "user")
             {
-                return redirect('/home');
+                return redirect('/activities');
             }
             else
             {
