@@ -70,7 +70,7 @@
                         </li>
                     @else
                         <li>
-                            <a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out icon"></i> <span class="text">Login</span></a>
+                            <a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out icon"></i> <span class="text">Deconnexion</span></a>
                         </li>
                     @endif
                 </ul>
