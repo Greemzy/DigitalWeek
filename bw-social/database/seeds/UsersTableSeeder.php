@@ -47,6 +47,7 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('Paul'),
             'age' => \Carbon\Carbon::create(1955,6,25),
             'id_hotel' => '1',
+            'role' => 'user',
             'rank' => 'Diamond',
             'image'=>'isabelle.png'
 
@@ -59,6 +60,7 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('Morgan'),
             'age' => \Carbon\Carbon::create(1978,3,12),
             'id_hotel' => '1',
+            'role' => 'user',
             'rank' => 'Gold',
             'image'=>'bruno.png'
         ]);

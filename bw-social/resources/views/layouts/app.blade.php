@@ -33,9 +33,15 @@
             <nav class="menu">
                 <ul>
                     <li>
-                        <a href="{{ route('user.show',['user' => Auth::user()->id]) }}">
-                            <i class="fa fa-user icon"></i>
-                            <span class="text">Mon compte</span>
+                        <a href="{{ route('activities.index') }}">
+                            <i class="icon fa fa-pencil-square-o"></i>
+                            <span class="text">Activités</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('user.index')}}">
+                            <i class="icon fa fa-users"></i>
+                            <span class="text">Utilisateurs</span>
                         </a>
                     </li>
                     <li>
@@ -45,15 +51,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('user.index')}}">
-                            <i class="icon fa fa-users"></i>
-                            <span class="text">Utilisateurs connectés</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('activities.index') }}">
-                            <i class="icon fa fa-pencil-square-o"></i>
-                            <span class="text">Activités</span>
+                        <a href="{{ route('user.show',['user' => Auth::user()->id]) }}">
+                            <i class="fa fa-user icon"></i>
+                            <span class="text">Mon compte</span>
                         </a>
                     </li>
                     @if (Auth::guest())
