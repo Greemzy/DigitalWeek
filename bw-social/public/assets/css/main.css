@@ -12,6 +12,9 @@ html, body {
     overflow-y: hidden;
     background-color: #F8F8F8;
     font-family:Verdana,Helvetica,Arial,sans-serif;
+    
+    max-width: 420px;
+    margin: auto;
 }
 
 a, ul, li {
@@ -153,7 +156,6 @@ a, ul, li {
     font-size: 1.7em;
 }
 
-@media only screen and (max-width: 750px) {
     ::-webkit-scrollbar {
       display: none;
     }
@@ -490,7 +492,6 @@ a, ul, li {
         padding-right: 0px;
         padding-left: 0px;
     }
-}
 
 h3{
     font-weight: bold;
@@ -598,4 +599,47 @@ p.white{
     background-image: linear-gradient(to bottom, #C50F5B, #B40040);
     text-decoration: none;
     border: solid #D03E7A 2px;
+}
+
+
+@media only screen and (min-width: 750px) {
+        .message {
+        background-color: #fff;
+        width: 100%;
+        padding: 20px;
+        margin: 20px;
+    }
+
+        #lesMessages {
+        overflow: auto;
+        bottom: 110px;
+        position: relative;
+        width: 100%;
+        margin-top: 115px;
+        z-index: 0;
+    }
+
+        .messages {
+        margin: 0 auto;
+        width: 100%;
+        background-color: #eee;
+        position: absolute;
+        height: 100%;
+    }
+    
+    .connexion {
+    background-color: rgba(255,255,255,0.8);
+    margin: 20px auto;
+    width: 100%;
+}
+    
+    .user_logo-solo {
+    height: 150px;
+    width: 150px;
+    float: left;
+    border-radius: 150px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+    
 }

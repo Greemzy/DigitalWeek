@@ -13,7 +13,7 @@
         @foreach($activities as $activity)
 
 
-            <div class="col-xs-12 col-sm-6 col-md-8 grid">
+            <div class="col-xs-12 grid">
                 <div class="activity">
                     <a href="{{ route('activities.show', [ '$activity' => $activity->id]) }}">
                         <div class="image-container">
