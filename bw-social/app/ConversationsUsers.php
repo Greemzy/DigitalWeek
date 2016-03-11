@@ -23,6 +23,10 @@ class ConversationsUsers extends Model
   }
     
   public function getInterlocutor(){
-    return $this->hasOne('App\ConversationsUsers', 'conv_id', 'conv_id')->where('user_id', "<>", $this->user_id);
+    return $this->belongsTo('App\ConversationsUsers', 'conv_id', 'conv_id')->where('user_id', "<>", $this->user_id);
+  }
+    
+  public function user(){
+    return $this->belongsTo('App\User');
   }
 }
