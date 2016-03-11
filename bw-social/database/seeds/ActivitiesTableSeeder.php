@@ -38,7 +38,7 @@ class ActivitiesTableSeeder extends Seeder
             'location' => 'Salle de detente',
             'description' => "Une soirée désigne un rassemblement de personnes, invitées ou non par un organisateur dans un même lieu (restaurant, bar, maison, appartement, plage, parc etc.), dans le but de socialiser, de parler ou de se divertir.",
             'hotel_id' => 2,
-            'user_id' => 1,
+            'user_id' => 3,
             'type_id' => 4
         ]);
     }
