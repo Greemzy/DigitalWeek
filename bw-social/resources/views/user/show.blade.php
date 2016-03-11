@@ -44,8 +44,8 @@
         @if($user->role != "admin")
 
         <div class="row">
-            <div class="container">
-                <a href="{{ route('conversation.create', ['user' => $user]) }}">
+            <div class="container messagecont">
+                <a href="{{ route('conversation.create', ['user' => $user]) }}" class="btn btn-default">
                     Envoyer un message
                 </a>
             </div>
