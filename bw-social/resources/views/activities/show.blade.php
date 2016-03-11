@@ -25,6 +25,16 @@
                                 <p class="white"> {{ $activity->user->firstname}} {{ $activity->user->name}}</p>
                             </div>
                         </div>
+                      @else
+                          <div class="info">
+                              <div class="bw_logo">
+                                  <img src="{{ asset('assets/img/logo.jpg') }}">
+                              </div>
+                              <div class="user_name">
+                                  <p class="white">Best Western</p>
+                              </div>
+                          </div>
+                      
                     @endif
                   </a>
                 </div>
