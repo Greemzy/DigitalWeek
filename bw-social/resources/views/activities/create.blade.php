@@ -32,7 +32,7 @@
                 </select>
             </div>
             <button type="submit" class="btn btn-default btn1" style="color:white">Ajouter</button>
-            <a href="{{ route('conversation.index') }}" class="btn btn-default">Retour</a>
+            <a href="{{ route('activities.index') }}" class="btn btn-default">Retour</a>
         </form>
         </div>
     </div>

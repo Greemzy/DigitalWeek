@@ -11,6 +11,7 @@
 @section('content')
     <h2 style="text-align:center">Vos activités</h2>
     <div class="row" style="padding:0px 10px 0px 10px;">
+        <h3 class="titleactivitie">Liste des activités</h3>
         @foreach($activities as $activity)
             <a href="{{route('activities.show', ['activity' => $activity])}}">
                 <div class="media" style="background-color:#fff;padding:15px;margin-bottom:15px;">

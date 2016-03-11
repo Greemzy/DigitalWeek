@@ -51,7 +51,7 @@ a, ul, li {
     padding: 0 25px;
     float: left;
     text-transform: uppercase;
-    font-size:32px;
+    font-size:1.4em;
     font-family: "CostaPtf",sans-serif;
 }
 
@@ -508,7 +508,10 @@ h3{
 {
     float: right;
 }
-
+.titleactivitie
+{
+    
+}
 .more {
     float: right;
     display : inline-block;
