@@ -18,7 +18,7 @@
         @endif
         {{ $message->user->name}} {{ $message->user->firstname}} </div>
       <div class="content">{{ $message->content}}</div>
-      <time class="date">@datetime( $message->created_at)</time>
+      <time class="date">@datetime_heure($message->created_at)</time>
     </div>
     @endforeach
   </div>
