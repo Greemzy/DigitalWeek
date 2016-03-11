@@ -10,7 +10,7 @@
 
 @section('content')
     <div class="row" id="list_activity">
-        <div class="col-xs-12 col-sm-6 col-md-8 grid">
+        <div class="col-xs-12 grid">
             <div class="activity">
                 <div class="image-container">
                   <a href="{{route('user.show', ['user' => $activity->user])}}">

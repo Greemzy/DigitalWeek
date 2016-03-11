@@ -5,7 +5,7 @@
         @foreach($users as $user)
             @if(Auth::user()->id != $user->id)
             <a href="{{route('user.show', ['user' => $user])}}">
-                <div class="col-lg-2 col-md-2 col-sm-4 card-bd">
+                <div class="col-xs-12 card-bd">
                     <div class="container card">
                     <span class="user_logo">
                         <img src="{{ asset('assets/img/'.$user->image) }}">
