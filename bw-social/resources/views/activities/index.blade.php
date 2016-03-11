@@ -72,7 +72,7 @@
     <div class="row grid">
         <div class="text-center">
             <button onclick="addActivity()" id="loadmore" class="btn1" style="color:white;padding:5px;margin-bottom:20px;">
-                Plus d'activitées
+                Plus d'activités
             </button>
         </div>
     </div>

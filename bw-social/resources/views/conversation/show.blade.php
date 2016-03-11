@@ -10,13 +10,26 @@
   <div id="lesMessages">
     @foreach($conversation->getMessages->reverse() as $message)
     <div class="message">
-      <div class="title">
-        @if($message->user->image)
-          <img class="imageMessages" src="{{ asset('assets/img/'.$message->user->image)}}">
-        @else
-          <img class="imageMessages" src="{{ asset('assets/img/blank-profile.jpg') }}">
-        @endif
-        {{ $message->user->name}} {{ $message->user->firstname}} </div>
+      <?php $user = Auth::user();?>
+      @if(!is_null($user) && $user->id == $message->user->id)
+          <div class="title" style="text-align: right;">
+            {{ $message->user->name}} {{ $message->user->firstname}}
+            @if($message->user->image)
+              <img class="imageMessages" src="{{ asset('assets/img/'.$message->user->image)}}">
+            @else
+              <img class="imageMessages" src="{{ asset('assets/img/blank-profile.jpg') }}">
+            @endif
+          </div>
+      @else
+        <div class="title">
+          @if($message->user->image)
+            <img class="imageMessages" src="{{ asset('assets/img/'.$message->user->image)}}">
+          @else
+            <img class="imageMessages" src="{{ asset('assets/img/blank-profile.jpg') }}">
+          @endif
+          {{ $message->user->name}} {{ $message->user->firstname}}
+        </div>
+      @endif
       <div class="content">{{ $message->content}}</div>
       <time class="date">@datetime_heure($message->created_at)</time>
     </div>
