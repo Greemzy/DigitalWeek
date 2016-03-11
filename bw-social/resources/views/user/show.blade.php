@@ -34,7 +34,7 @@
         </div>
     </div>
     <br>
-    @if(!Auth::user()->id == $user->id)
+    @if(Auth::user()->id != $user->id)
     <div class="row">
         <div class="container">
             <a href="{{ route('conversation.create', ['user' => $user]) }}">
