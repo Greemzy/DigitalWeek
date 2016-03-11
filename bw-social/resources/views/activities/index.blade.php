@@ -40,7 +40,7 @@
                             @endif
                         </div>
                     </a>
-                    <div class="content">
+                    <div class="content" style="padding-bottom: 50px;">
                         <a href="{{ route('activities.show', [ '$activity' => $activity->id]) }}" style="text-decoration: none;">
                             <h3 style="text-decoration: none;color:black;">{{ $activity->name }} <span class="date_activity"> {{$activity->date_activity}}</span></h3>
                         </a>
