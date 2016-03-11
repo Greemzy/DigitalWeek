@@ -28,7 +28,7 @@
               <div class="col-xs-9">
                 <p>{{ $content->content}}</p>
               </div>
-              <div class="col-xs-3" style="padding-top:10px; padding-left: 0px;">
+              <div class="dateright" style="padding-top:10px; padding-left: 0px;">
                 @datetimea(date_create(($content->created_at)))
               </div>
             </div>

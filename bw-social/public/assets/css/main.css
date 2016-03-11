@@ -503,6 +503,10 @@ h3{
     color: grey;
     font-weight: bold;
 }
+.dateright
+{
+    float: right;
+}
 
 .more {
     float: right;
