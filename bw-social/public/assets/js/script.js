@@ -62,7 +62,7 @@ function addActivity() {
                 $.each(jsonResponse, function () {
                     console.log(this);
                     $("#list_activity").append("<div class=\"col-xs-12 col-sm-6 col-md-8 grid\">"+
-                        "<div class=\"activity\"><a href=\"/activities/"+ this.id +"\">"+
+                        "<div class=\"activity\"><a href=\"/activities/"+ this.id +"/show\">"+
                         "<div class=\"image-container\"><img src=\"assets/img/" + this.type.image + "\" alt=\"...\" class=\"activitybanner\">"+
                         "<div class=\"after\"></div>"+
                         "<div class=\"info\">"+
@@ -74,7 +74,7 @@ function addActivity() {
                         "</div>"+
                         "</div>"+
                         "</a>"+
-                        "<div class=\"content\" style=\"padding-bottom: 50px;\"><a href=\"/activities/"+ this.id +"\" style=\"text-decoration: none;\">"+
+                        "<div class=\"content\" style=\"padding-bottom: 50px;\"><a href=\"/activities/"+ this.id +"/show\" style=\"text-decoration: none;\">"+
                         "<h3 style=\"text-decoration: none;color:black;\">" + this.name+ "<span class=\"date_activity\">" + this.date_activity + "</span></h3></a>"+
                 "<div class=\"activity_description\">"+
                 "<p>"+

@@ -13,7 +13,7 @@ class TypeActivitiesTableSeeder extends Seeder
     public function run()
     {
         DB::table('types_activities')->insert([
-        'name' => 'Culturelle',
+        'name' => 'Culturel',
         'image' => 'musee.jpg'
         ]);
         DB::table('types_activities')->insert([
@@ -21,7 +21,7 @@ class TypeActivitiesTableSeeder extends Seeder
             'image' => 'jacuzzi.jpg'
         ]);
         DB::table('types_activities')->insert([
-            'name' => 'Sportive',
+            'name' => 'Sportif',
             'image' => 'accrobranche.jpg'
         ]);
         DB::table('types_activities')->insert([
