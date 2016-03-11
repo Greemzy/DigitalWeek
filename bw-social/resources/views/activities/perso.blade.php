@@ -10,6 +10,7 @@
 @endsection
 @section('content')
     <div class="row" style="padding:0px 10px 0px 10px;">
+        <h3 class="titleactivitie">Liste des activit√©s</h3>
         @foreach($activities as $activity)
             <a href="{{route('activities.show', ['activity' => $activity])}}">
                 <div class="media" style="background-color:#fff;padding:15px;margin-bottom:15px;">
@@ -20,7 +21,7 @@
                         <h4 class="media-heading" style="font-weight: bold;">{{ $activity->name }}</h4>
                         <?php
                             setlocale (LC_TIME, 'fr_FR','fra');
-                            //DÈfinit le dÈcalage horaire par dÈfaut de toutes les fonctions date/heure
+                            //DÔøΩfinit le dÔøΩcalage horaire par dÔøΩfaut de toutes les fonctions date/heure
                             date_default_timezone_set("Europe/Paris");
                             //Definit l'encodage interne
                             mb_internal_encoding("UTF-8");

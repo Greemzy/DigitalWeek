@@ -41,13 +41,16 @@
     </div>
     <br>
     @if(Auth::user()->id != $user->id)
-    <div class="row">
-        <div class="container">
-            <a href="{{ route('conversation.create', ['user' => $user]) }}">
-                Envoyer un message
-            </a>
+        @if($user->role != "admin")
+
+        <div class="row">
+            <div class="container">
+                <a href="{{ route('conversation.create', ['user' => $user]) }}">
+                    Envoyer un message
+                </a>
+            </div>
         </div>
-    </div>
+            @endif
     @endif
 </div>
 @endsection
