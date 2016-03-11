@@ -41,7 +41,7 @@
                     <li>
                         <a href="{{route('user.index')}}">
                             <i class="icon fa fa-users"></i>
-                            <span class="text">Utilisateurs connectés</span>
+                            <span class="text">Utilisateurs</span>
                         </a>
                     </li>
                     <li>
