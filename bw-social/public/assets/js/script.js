@@ -61,23 +61,27 @@ function addActivity() {
                 var jsonResponse = JSON.parse(data['activities']);
                 $.each(jsonResponse, function () {
                     console.log(this);
-                    $("#list_activity").append("<div class=\"col-xs-12 col-sm-6 col-md-8 grid\">" +
-                        "<div class=\"activity\">"+
-                        "<div class=\"image-container\"><img src=\"assets/img/" + this.type.image + "\" alt=\"...\" class=\"activitybanner\">" +
-                            "<div class=\"after\"></div>"+
-                            "<div class=\"info\">"+
-                                "<div class=\"user_logo\">"+
-                                     "<img src=\"assets/img/blank-profile.jpg\">"+
-                                "</div>"+
-                                "<div class=\"user_name\">"+
-                                   "<p class=\"white\">" + this.user.firstname + this.user.name+"</p>"+
-                                "</div>"+
-                            "</div>"+
+                    $("#list_activity").append("<div class=\"col-xs-12 col-sm-6 col-md-8 grid\">"+
+                        "<div class=\"activity\"><a href=\"/activities/"+ this.id +"\">"+
+                        "<div class=\"image-container\"><img src=\"assets/img/" + this.type.image + "\" alt=\"...\" class=\"activitybanner\">"+
+                        "<div class=\"after\"></div>"+
+                        "<div class=\"info\">"+
+                        "<div class=\"user_logo\"><img src=\"assets/img/" + this.user.image + "\">"+
                         "</div>"+
-                        "<div class=\"content\"><h3>" + this.name + "<br><span class=\"date\">" + this.date_activity + "</span></h3>" +
-                        "<p class=\"activity_description\">" + this.description + "</p><a class=\"more\">voir plus...</a>" +
-                        "<a class=\"less hidden\">voir moins...</a>"+
-                        "<a class=\"participate\" href=\"\">Je participe</a></div></div></div></div>");
+                        "<div class=\"user_name\">"+
+                        "<p class=\"white\">" + this.user.firstname + this.user.name + "</p>"+
+                        "</div>"+
+                        "</div>"+
+                        "</div>"+
+                        "</a>"+
+                        "<div class=\"content\" style=\"padding-bottom: 50px;\"><a href=\"/activities/"+ this.id +"\" style=\"text-decoration: none;\">"+
+                        "<h3 style=\"text-decoration: none;color:black;\">" + this.name+ "<span class=\"date_activity\">" + this.date_activity + "</span></h3></a>"+
+                "<div class=\"activity_description\">"+
+                "<p>"+
+                    this.description+
+                "</p>"+
+                "</div><a class=\"more\">Voir plus...</a><a class=\"less hidden\">Voir moins...</a></div></div></div>"
+);
 
                 });
 
