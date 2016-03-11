@@ -1,14 +1,5 @@
 @extends('layouts.app')
 
-@section('logo')
-    <a href="{{ route('activities.index') }}" class="icon_activity">
-        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-    </a>
-    <a href="{{ route('activities.perso') }}" class="icon_activity">
-        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-    </a>
-@endsection
-
 @section('content')
     <br>
 <div class="container">
@@ -41,6 +32,7 @@
                 </select>
             </div>
             <button type="submit" class="btn btn-default btn1" style="color:white">Ajouter</button>
+            <a href="{{ route('conversation.index') }}" class="btn btn-default">Retour</a>
         </form>
         </div>
     </div>
