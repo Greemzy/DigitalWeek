@@ -84,6 +84,22 @@ a, ul, li {
     height: 100%;
     width: 100%;
 }
+.bw_logo {
+    display: block;
+    height: 50px;
+    width: 50px;
+    float: left;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50%;
+    border-radius: 50px;
+
+}
+
+.bw_logo img {
+    height: 100%;
+    width: 100%;
+}
 
 .user_name {
     display: block;
