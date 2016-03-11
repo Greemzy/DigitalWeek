@@ -10,9 +10,9 @@
                         {!! csrf_field() !!}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">E-Mail Address</label>
+                            <label class="col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0 control-label" style="text-align:left">E-Mail Address</label>
 
-                            <div class="col-md-6">
+                            <div class="col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0">
                                 <input type="email" class="form-control" name="email" value="{{ old('email') }}">
 
                                 @if ($errors->has('email'))
@@ -24,9 +24,9 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Password</label>
+                            <label class="col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0 control-label" style="text-align:left">Password</label>
 
-                            <div class="col-md-6">
+                            <div class="col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0">
                                 <input type="password" class="form-control" name="password">
 
                                 @if ($errors->has('password'))
@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0">
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" name="remember"> Remember Me
@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0">
                                 <button type="submit" class="btn btn-primary btn1">
                                     <i class="fa fa-btn fa-sign-in"></i> Login
                                 </button>
