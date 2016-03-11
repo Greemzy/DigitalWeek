@@ -50,30 +50,34 @@
                         date_default_timezone_set("Europe/Paris");
                         //Definit l'encodage interne
                         mb_internal_encoding("UTF-8");
-                        $strDate = mb_convert_encoding('%A %d %B %Y, %Hh%M','ISO-8859-9','UTF-8');
+                        $strDate = mb_convert_encoding('%A %d %B %Y &agrave; %Hh%M','ISO-8859-9','UTF-8');
                         $date = strftime($strDate ,strtotime($activity->date_activity));
                     ?>
-                    <span class="date_activity" style="color:#B40040">Le {{$date}} &agrave; {{$activity->location}}</span>
-
-
+                    <span class="date_activity" style="color:#B40040">Le {{$date}} , {{$activity->location}}</span>
                     @if(!is_null($user) && $user->id != $activity->user_id && !$activity->isParticipate())
-                        <a class="participate" href="{{route('activities.add', ['activity' => $activity])}}">Je
-                            participe</a>
+                        <div style="text-align:center;margin-top:15px;">
+                            <a class="participate btn btn1" href="{{route('activities.add', ['activity' => $activity])}}">Participer</a>
+                        </div>
                     @endif
                 </div>
                 <hr>
                 <span style="font-weight:bold;padding:10px;">Liste des participants</span>
                 <ul>
-                    @foreach($users as $use)
-                        <li style="padding : 10px;">
-                                <div class="user_logo">
-                                    <img src="{{ asset('assets/img/'.$use->user->image) }}">
-                                </div>
-                                <div class="user_name">
-                                    <p style="font-weight:normal;"> {{ $use->user->firstname}} {{ $use->user->name}}</p>
-                                </div>
-                        </li>
-                    @endforeach
+                    @if($users->count() > 0)
+                        @foreach($users as $use)
+                            <li style="padding : 10px;height:75px;">
+                                    <div class="user_logo">
+                                        <img src="{{ asset('assets/img/'.$use->user->image) }}">
+                                    </div>
+                                    <div class="user_name">
+                                        <p style="font-weight:normal;"> {{ $use->user->firstname}} {{ $use->user->name}}</p>
+                                    </div>
+                            </li>
+                        @endforeach
+                    @else
+                        <li style="padding:10px;height:50px;"> Aucun participant </li>
+                    @endif
+
                 </ul>
             </div>
         </div>

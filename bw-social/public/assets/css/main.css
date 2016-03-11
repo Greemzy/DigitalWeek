@@ -452,7 +452,7 @@ a, ul, li {
     .activity .content {
         padding: 9px;
         color: #333;
-        padding-bottom: 40px;
+        padding-bottom: 10px;
     }
 
     .icon_activity {
@@ -499,8 +499,7 @@ h3{
 
 
 .date_activity {
-    float: left;
-    font-size: 14px;
+    font-size: 17px;
     padding:10px;
     color: grey;
     font-weight: bold;
@@ -522,10 +521,11 @@ h3{
     color:white;
     text-decoration: none;
     font-size: 16px;
+    width: 70%;
 }
 
-.participate:active{
-    color:white;
+.participate:hover{
+    color: white;
 }
 
 .activity_description {
