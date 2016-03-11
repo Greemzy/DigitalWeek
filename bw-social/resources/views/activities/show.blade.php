@@ -34,7 +34,7 @@
                                   <p class="white">Best Western</p>
                               </div>
                           </div>
-                      
+
                     @endif
                   </a>
                 </div>

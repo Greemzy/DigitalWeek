@@ -29,15 +29,7 @@ class ConversationsMessagesTableSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
         
-        DB::table('conversations_messages')->insert([
-            'user_id' => 1,
-            'conv_id' => 1,
-            'content' => 'Très bien merci, que faites vous aujourd\'hui?',
-            'read' => 0,
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now()
-        ]);
-        
+
         DB::table('conversations_messages')->insert([
             'user_id' => 2,
             'conv_id' => 2,
@@ -64,14 +56,6 @@ class ConversationsMessagesTableSeeder extends Seeder
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
-        
-        DB::table('conversations_messages')->insert([
-            'user_id' => 1,
-            'conv_id' => 3,
-            'content' => 'Que diriez vous de faire un petit plongeon dans la piscine?',
-            'read' => 0,
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now()
-        ]);
+
     }
 }
