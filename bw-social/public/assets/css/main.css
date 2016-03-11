@@ -636,10 +636,10 @@ p.white{
     width: 100%;
 }
     
-    .user_logo-solo {
+    .user_logo-solo {   
     height: 150px;
     width: 150px;
-    float: left;
+    float: none;
     border-radius: 150px;
     margin: 0 auto;
     margin-top: 15px;
