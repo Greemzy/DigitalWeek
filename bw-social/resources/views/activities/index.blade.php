@@ -11,42 +11,62 @@
 @section('content')
     <div class="row" id="list_activity">
         @foreach($activities as $activity)
-            <a href="{{ route('activities.show', [ '$activity' => $activity->id]) }}">
+
 
             <div class="col-xs-12 col-sm-6 col-md-8 grid">
                 <div class="activity">
-                    <div class="image-container">
-                        <img src="{{ asset('assets/img/'.$activity->type->image) }}" alt="..." class="activitybanner">
-                        <div class="after"></div>
-                        @if($activity->user->role != "admin")
-                        <div class="info">
-                            <div class="user_logo">
-                                <img src="{{ asset('assets/img/'.$activity->user->image) }}">
+                    <a href="{{ route('activities.show', [ '$activity' => $activity->id]) }}">
+                        <div class="image-container">
+                            <img src="{{ asset('assets/img/'.$activity->type->image) }}" alt="..." class="activitybanner">
+                            <div class="after"></div>
+                            @if($activity->user->role != "admin")
+                            <div class="info">
+                                <div class="user_logo">
+                                    <img src="{{ asset('assets/img/'.$activity->user->image) }}">
+                                </div>
+                                <div class="user_name">
+                                    <p class="white"> {{ $activity->user->firstname}} {{ $activity->user->name}}</p>
+                                </div>
                             </div>
-                            <div class="user_name">
-                                <p class="white"> {{ $activity->user->firstname}} {{ $activity->user->name}}</p>
-                            </div>
+                            @else
+                                <div class="info">
+                                    <div class="bw_logo">
+                                        <img src="{{ asset('assets/img/logo.jpg') }}">
+                                    </div>
+                                    <div class="user_name">
+                                        <p class="white">Best Western</p>
+                                    </div>
+                                </div>
+                            @endif
                         </div>
-                        @endif
-                    </div>
+                    </a>
                     <div class="content">
-                        <h3>{{ $activity->name }}</h3>
-                        <p class="activity_description">
-                            {{ $activity->description }}
-                        </p>
+                        <a href="{{ route('activities.show', [ '$activity' => $activity->id]) }}">
+                            <h3 style="text-decoration: none;color:black;">{{ $activity->name }}</h3>
+                        </a>
+                        <div class="activity_description">
+                            <p>
+                                {{ $activity->description }}
+                            </p>
+                            @if(!is_null($user) && $user->id != $activity->user_id && !$activity->isParticipate())
+                            <div style="text-align: center;margin: 10px;">
+                                <a class="participate btn btn1" href="{{route('activities.add', ['activity' => $activity])}}">
+                                    Je veux
+                                    participer !
+                                </a>
+                            </div>
+
+                            @endif
+                        </div>
+
                         <span class="date_activity"> {{$activity->date_activity}}</span>
                         <a class="more">Voir plus...</a>
                         <a class="less hidden">Voir moins...</a>
 
-
-                        @if(!is_null($user) && $user->id != $activity->user_id && !$activity->isParticipate())
-                            <a class="participate" href="{{route('activities.add', ['activity' => $activity])}}">Je
-                                participe</a>
-                        @endif
                     </div>
                 </div>
             </div>
-            </a>
+
 
         @endforeach
     </div>

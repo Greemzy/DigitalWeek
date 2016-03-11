@@ -84,6 +84,22 @@ a, ul, li {
     height: 100%;
     width: 100%;
 }
+.bw_logo {
+    display: block;
+    height: 50px;
+    width: 50px;
+    float: left;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50%;
+    border-radius: 50px;
+
+}
+
+.bw_logo img {
+    height: 100%;
+    width: 100%;
+}
 
 .user_name {
     display: block;
@@ -134,7 +150,10 @@ a, ul, li {
 }
 
 @media only screen and (max-width: 750px) {
-
+  ::-webkit-scrollbar {
+    display: none;
+  }
+    
     a, ul, li {
         float: none;
     }
@@ -487,9 +506,13 @@ h3{
 }
 
 .participate {
-    display: none;
-    float: right;
-    padding: 10px;
+    color:white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.participate:active{
+    color:white;
 }
 
 .activity_description {
@@ -500,10 +523,12 @@ h3{
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     overflow: hidden;
+
 }
 
 .expand {
     max-height: 500px;
+
 }
 
 .hidden {

@@ -20,7 +20,7 @@ var_dump($locutor);
                     @else
                         <img class="imageMessages" src="{{ asset('assets/img/blank-profile.jpg') }}">
                     @endif
-                    <span style="font-weight: bold;">{{ $content->user->name}}</span> <a href="{{route('conversation.delete', [ 'conversation' => $conversation->conv_id])}}" style="float:right">X</a>
+                    <span style="font-weight: bold;">{{ $content->user->name}} {{ $content->user->firstname}}</span> <a href="{{route('conversation.delete', [ 'conversation' => $conversation->conv_id])}}" style="float:right">X</a>
                 </div>
             </div>
             <div class="row">

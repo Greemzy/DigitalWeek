@@ -22,8 +22,7 @@ class AppServiceProvider extends ServiceProvider
             //Definit l'encodage interne
             mb_internal_encoding("UTF-8");
             $strDate = mb_convert_encoding('%A %d %B %Y, %Hh%M','ISO-8859-9','UTF-8');
-            return iconv("ISO-8859-9","UTF-8",strftime($strDate ,strtotime($expression)));
-
+            return strftime($strDate ,strtotime($expression));
         });
 
       \Blade::directive('datetime', function($expression) {

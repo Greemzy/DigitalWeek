@@ -16,11 +16,24 @@
             </div>
         </div>
     </div>
+    <br>
     <div class="row">
         <div class="container">
-
+            <div>
+                Reward :
+                <span>{{ $user->rank }}</span>
+            </div>
+            <div>
+                Age :
+                <?php
+                    $tz  = new DateTimeZone('Europe/Brussels');
+                    $age = DateTime::createFromFormat('Y-m-d H:i:s', $user->age)->diff(new DateTime('now'))->y;
+                ?>
+                <span>{{ $age }} ans</span>
+            </div>
         </div>
     </div>
+    <br>
     <div class="row">
         <div class="container">
             <a href="{{ route('conversation.create', ['user' => $user]) }}">

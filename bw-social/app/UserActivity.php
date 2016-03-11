@@ -15,4 +15,8 @@ class UserActivity extends Model
     public function activity(){
         return $this->belongsTo('App\Activity');
     }
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

@@ -14,17 +14,19 @@
 .imageMessages{
   width: 50px;
   border-radius: 30px;
-  margin: 15px;
+  margin: 7px;
   border: solid 4px #122F65;
 }
 
 .title{
-  font-size: 30px;
-  text-align: center;
+  font-size: 24px;
+  border-bottom: 2px solid #F8F8F8;
+  margin-bottom:10px;
 }
 
 .content{
     font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .date{
@@ -84,6 +86,6 @@ input::-ms-input-placeholder {
 
   .message{
     width: 100%;
-    margin: 20px 0px;
+    margin: 10px 0px;
   }
 }
