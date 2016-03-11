@@ -33,15 +33,9 @@
             <nav class="menu">
                 <ul>
                     <li>
-                        <a href="{{ route('user.show',['user' => Auth::user()->id]) }}">
-                            <i class="fa fa-user icon"></i>
-                            <span class="text">Mon compte</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('conversation.index') }}">
-                            <i class="icon fa fa-commenting"></i>
-                            <span class="text">Mes messages</span>
+                        <a href="{{ route('activities.index') }}">
+                            <i class="icon fa fa-pencil-square-o"></i>
+                            <span class="text">Activités</span>
                         </a>
                     </li>
                     <li>
@@ -51,9 +45,15 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('activities.index') }}">
-                            <i class="icon fa fa-pencil-square-o"></i>
-                            <span class="text">Activités</span>
+                        <a href="{{ route('conversation.index') }}">
+                            <i class="icon fa fa-commenting"></i>
+                            <span class="text">Mes messages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('user.show',['user' => Auth::user()->id]) }}">
+                            <i class="fa fa-user icon"></i>
+                            <span class="text">Mon compte</span>
                         </a>
                     </li>
                     @if (Auth::guest())

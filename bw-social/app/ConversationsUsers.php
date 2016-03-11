@@ -21,4 +21,12 @@ class ConversationsUsers extends Model
   public function lastMessages(){
     return $this->hasMany('App\ConversationsMessages', 'conv_id', 'conv_id')->where('user_id', "<>", $this->user_id);
   }
+    
+  public function getInterlocutor(){
+    return $this->belongsTo('App\ConversationsUsers', 'conv_id', 'conv_id')->where('user_id', "<>", $this->user_id);
+  }
+    
+  public function user(){
+    return $this->belongsTo('App\User');
+  }
 }
