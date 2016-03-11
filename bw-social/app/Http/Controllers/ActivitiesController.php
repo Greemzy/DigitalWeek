@@ -67,7 +67,7 @@ class ActivitiesController extends Controller
     {
         $user = Auth::user();
         if(!is_null($user)){
-            $activities = Activity::where('user_id', '=', '1')->get();
+            $activities = Activity::where('user_id', '=', $user->id)->get();
 
             $activitiesAll = $activities;
             foreach($user->userActivity as $act){
@@ -138,7 +138,6 @@ class ActivitiesController extends Controller
     {
         $user = Auth::user();
         $users = $activity->participate()->get();
-
         return view('activities.show', ['activity' => $activity,'user' => $user,'users' => $users]);
 
     }

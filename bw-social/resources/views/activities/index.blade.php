@@ -35,16 +35,25 @@
                         <a href="{{ route('activities.show', [ '$activity' => $activity->id]) }}">
                             <h3 style="text-decoration: none;color:black;">{{ $activity->name }}</h3>
                         </a>
-                        <p class="activity_description">
-                            {{ $activity->description }}
-                        </p>
+                        <div class="activity_description">
+                            <p>
+                                {{ $activity->description }}
+                            </p>
+                            @if(!is_null($user) && $user->id != $activity->user_id && !$activity->isParticipate())
+                            <div style="text-align: center;margin: 10px;">
+                                <a class="participate btn btn1" href="{{route('activities.add', ['activity' => $activity])}}">
+                                    Je veux
+                                    participer !
+                                </a>
+                            </div>
+
+                            @endif
+                        </div>
+
                         <span class="date_activity"> {{$activity->date_activity}}</span>
                         <a class="more">Voir plus...</a>
                         <a class="less hidden">Voir moins...</a>
-                        @if(!is_null($user) && $user->id != $activity->user_id && !$activity->isParticipate())
-                            <a class="participate" href="{{route('activities.add', ['activity' => $activity])}}">Je
-                                participe</a>
-                        @endif
+
                     </div>
                 </div>
             </div>

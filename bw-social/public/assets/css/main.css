@@ -487,9 +487,13 @@ h3{
 }
 
 .participate {
-    display: none;
-    float: right;
-    padding: 10px;
+    color:white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.participate:active{
+    color:white;
 }
 
 .activity_description {
@@ -500,10 +504,12 @@ h3{
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     overflow: hidden;
+
 }
 
 .expand {
     max-height: 500px;
+
 }
 
 .hidden {
