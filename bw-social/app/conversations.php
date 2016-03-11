@@ -15,6 +15,6 @@ class Conversations extends Model
   }
 
   public function getInterlocutor($userId){
-    return $this->hasMany('App\ConversationsUsers')->where('user_id', '<>' ,$userId);
+    return ConversationsUsers::where('user_id', '<>' ,$userId);
   }
 }
