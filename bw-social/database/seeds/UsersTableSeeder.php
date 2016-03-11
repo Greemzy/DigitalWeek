@@ -30,12 +30,23 @@ class UsersTableSeeder extends Seeder
             'name' => 'Sageot',
             'email' => 'user2@hotmail.fr',
             'firstname' => 'Maxime',
-            'role' => 'admin',
+            'role' => 'user',
             'password' => bcrypt('User2'),
             'age' => \Carbon\Carbon::create(1989,5,20),
             'id_hotel' => '1',
             'rank' => 'Diamond',
             'image'=>'maxime.png'
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Western',
+            'email' => 'bw@hotmail.fr',
+            'firstname' => 'Best',
+            'role' => 'admin',
+            'password' => bcrypt('best'),
+            'age' => \Carbon\Carbon::create(1989,5,20),
+            'id_hotel' => '3',
+            'rank' => 'Diamond',
+            'image'=>'logo.jpg'
         ]);
         
         

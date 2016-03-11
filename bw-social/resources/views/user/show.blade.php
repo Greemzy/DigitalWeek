@@ -21,15 +21,21 @@
         <div class="container">
             <div>
                 Reward :
-                <span>{{ $user->rank }}</span>
+                @if($user->role != "admin")
+                    <span>{{ $user->rank }}</span>
+                @else
+                    <span>Admin</span>
+                @endif
             </div>
             <div>
+                @if($user->role != "admin")
                 Age :
                 <?php
                     $tz  = new DateTimeZone('Europe/Brussels');
                     $age = DateTime::createFromFormat('Y-m-d H:i:s', $user->age)->diff(new DateTime('now'))->y;
                 ?>
                 <span>{{ $age }} ans</span>
+                @endif
             </div>
         </div>
     </div>
