@@ -8,7 +8,7 @@
 @section('content')
 <div id="messages" class="messages">
   <div id="lesMessages">
-    @foreach($conversation->getMessages as $message)
+    @foreach($conversation->getMessages->reverse() as $message)
     <div class="message">
       <div class="title">
         @if($message->user->image)
